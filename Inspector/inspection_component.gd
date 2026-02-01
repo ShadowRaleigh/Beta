@@ -1,2 +1,4 @@
-extends Resource
-@export var modelo:Resource
+class_name InspectionComponent
+extends Node
+
+@export var idata:InspectionData

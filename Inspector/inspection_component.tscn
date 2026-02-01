@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjfx7ruj48cj5"]
 
-[ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Inspector/inspection_component.gd" id="1_ltgg2"]
+[ext_resource type="Script" uid="uid://7bs881k24lwe" path="res://Inspector/inspection_component.gd" id="1_ltgg2"]
 
-[node name="Inspection Component" type="Node3D" unique_id=1564298073]
+[node name="Inspection Component" type="Node" unique_id=2015836501]
 script = ExtResource("1_ltgg2")

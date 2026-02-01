@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dhb6yiacidb53"]
+
+[ext_resource type="PackedScene" uid="uid://cjfx7ruj48cj5" path="res://Inspector/inspection_component.tscn" id="1_p08hk"]
+[ext_resource type="Resource" uid="uid://rsbfthx213jk" path="res://Pistola/pistol_idata.tres" id="2_p08hk"]
+
+[node name="Pistola" type="Node3D" unique_id=1532391]
+
+[node name="Inspection Component" parent="." unique_id=1564298073 instance=ExtResource("1_p08hk")]
+idata = ExtResource("2_p08hk")
