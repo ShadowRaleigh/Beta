@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://831lsk4t3md6"]
+
+[ext_resource type="Script" uid="uid://54laqc25crad" path="res://inventario.gd" id="1_07pah"]
+
+[node name="Inventario" type="Node3D" unique_id=1723167752]
+script = ExtResource("1_07pah")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=278736675]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=2119179229]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=465026079]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=843668021]
+
+[node name="ItemAnchor" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1546371388]
