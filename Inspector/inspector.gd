@@ -2,13 +2,20 @@ extends Node3D
 
 const PAN_SPEED:float = .05
 const ROT_SPEED_DEGREES: float = 1
+const MOUSE_DRAG_FACTOR:float = 15
+const MOUSE_ROT_FACTOR:float = 7
+@onready var pivot: Marker3D = %Pivot
+var frame_duration:float
 
-enum mouse_panning {
+
+
+enum Mouse_Panning {
 	NEUTRAL,
-	STARTED_DRAGGING,
 	DRAGGING,
-	RELEASED,
+	ROTATING
 }
+var mouse_state:Mouse_Panning = Mouse_Panning.NEUTRAL
+
 
 @onready var component:InspectionComponent = $"Pistola/Inspection Component"
 var component_ready:bool = false
@@ -25,6 +32,72 @@ func _process(delta: float) -> void:
 		pass
 	else: component_ready = true
 	
+	manage_component(delta)
+	frame_duration = delta
+
+func _unhandled_input(event: InputEvent) -> void:
+	match mouse_state:
+		Mouse_Panning.NEUTRAL:
+			if event.is_action_pressed("insp_drag"):
+				mouse_state = Mouse_Panning.DRAGGING
+			elif event.is_action_pressed("insp_rotate"):
+				mouse_state = Mouse_Panning.ROTATING
+		
+		Mouse_Panning.DRAGGING:
+			if event is InputEventMouseMotion:
+				#pivot.rotate_x(deg_to_rad((-event.screen_relative.y * ROT_SPEED_DEGREES) / MOUSE_COMPENSATION_FACTOR))
+				#pivot.rotate_y(deg_to_rad((-event.screen_relative.x * ROT_SPEED_DEGREES) / MOUSE_COMPENSATION_FACTOR))
+				var tween:Tween = create_tween()
+				tween.tween_property(model_scene, "position",
+				Vector3(
+						model_scene.position.x + (event.screen_relative.x * PAN_SPEED / MOUSE_DRAG_FACTOR), #X
+						model_scene.position.y - (event.screen_relative.y * PAN_SPEED / MOUSE_DRAG_FACTOR), #Y
+						 0), #Z
+						 frame_duration
+						) 
+			
+			if event.is_action_released("insp_drag"):
+				mouse_state = Mouse_Panning.NEUTRAL
+				
+		Mouse_Panning.ROTATING:
+			if event is InputEventMouseMotion:
+				var tween:Tween = create_tween()
+				tween.tween_property(model_scene, "rotation_degrees", 
+				Vector3(
+						model_scene.rotation_degrees.x + (event.screen_relative.y * ROT_SPEED_DEGREES / MOUSE_ROT_FACTOR), #X
+						model_scene.rotation_degrees.y - (event.screen_relative.x * ROT_SPEED_DEGREES / MOUSE_ROT_FACTOR), #Y
+						0), #Z
+						frame_duration
+						)
+			
+			if event.is_action_released("insp_rotate"):
+				mouse_state = Mouse_Panning.NEUTRAL
+	
+func move_item(delta) -> void:
+	var input_dir:Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var rotation_dir:Vector2 = Input.get_vector("rotate_clock_X", "rotate_counterclock_X","rotate_clock_Y", "rotate_counterclock_Y")
+	
+	if input_dir:
+		var tween:Tween = create_tween()
+		tween.tween_property(model_scene, "position",
+				Vector3(
+						model_scene.position.x - (input_dir.x * PAN_SPEED), #X
+						model_scene.position.y + (input_dir.y * PAN_SPEED), #Y
+						 0), #Z
+						 delta
+						)  
+		
+	if rotation_dir: 
+		var tween:Tween = create_tween()
+		tween.tween_property(model_scene, "rotation_degrees",
+				Vector3(
+						model_scene.rotation_degrees.x + (rotation_dir.x * ROT_SPEED_DEGREES), #X
+						model_scene.rotation_degrees.y + (rotation_dir.y * ROT_SPEED_DEGREES), #Y
+						 0), #Z
+						 delta
+						) 
+
+func manage_component(delta):
 	if component_ready and not model_scene:
 		i_model = component.idata.model
 		i_name = component.idata.name
@@ -33,21 +106,3 @@ func _process(delta: float) -> void:
 	
 	elif component_ready and model_scene:
 		move_item(delta)
-
-func _unhandled_input(_event: InputEvent) -> void:
-	pass
-	
-func move_item(delta) -> void:
-	var input_dir:Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	@warning_ignore("narrowing_conversion")
-	var rotation_dir:Vector2 = Input.get_vector("rotate_clock_X", "rotate_counterclock_X","rotate_clock_Y", "rotate_counterclock_Y")
-	
-	if input_dir:
-		var tween:Tween = create_tween()
-		tween.tween_property(model_scene, "position:x", model_scene.position.x - (input_dir.x * PAN_SPEED), delta) 
-		tween.tween_property(model_scene, "position:y", model_scene.position.y + (input_dir.y * PAN_SPEED), delta)
-		
-	if rotation_dir: 
-		var tween:Tween = create_tween()
-		tween.tween_property(model_scene, "rotation_degrees:x", model_scene.rotation_degrees.x + (rotation_dir.x * ROT_SPEED_DEGREES), delta)
-		tween.tween_property(model_scene, "rotation_degrees:y", model_scene.rotation_degrees.y + (rotation_dir.y * ROT_SPEED_DEGREES), delta)

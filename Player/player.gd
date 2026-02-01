@@ -12,8 +12,8 @@ func _ready() -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion :
-		head.rotate_x(deg_to_rad(-event.relative.y * sensitivity))
-		rotate_y(deg_to_rad(-event.relative.x * sensitivity))
+		head.rotate_x(deg_to_rad(-event.screen_relative.y * sensitivity))
+		rotate_y(deg_to_rad(-event.screen_relative.x * sensitivity))
 		
 		head.rotation.x = clampf(head.rotation.x, deg_to_rad(-MAX_ROTATION), deg_to_rad(MAX_ROTATION))
 
