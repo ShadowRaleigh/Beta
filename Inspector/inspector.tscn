@@ -7,8 +7,10 @@
 script = ExtResource("1_wxhdx")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=80519017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9406023)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
 [node name="Pistola" parent="." unique_id=1532391 instance=ExtResource("2_6dy17")]
+
+[node name="Pivot" type="Marker3D" parent="." unique_id=2144943237]
 
 [editable path="Pistola"]

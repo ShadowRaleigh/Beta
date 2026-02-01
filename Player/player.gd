@@ -16,9 +16,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_y(deg_to_rad(-event.relative.x * sensitivity))
 		
 		head.rotation.x = clampf(head.rotation.x, deg_to_rad(-MAX_ROTATION), deg_to_rad(MAX_ROTATION))
-		
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
 
 func _physics_process(delta: float) -> void:
 	
