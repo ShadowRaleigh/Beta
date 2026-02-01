@@ -1,6 +1,7 @@
 extends Node3D
 
 const pan_speed:float = .05
+const rot_speed_degrees: float = 1
 @onready var component:InspectionComponent = $"Pistola/Inspection Component"
 var component_ready:bool = false
 var i_model:Resource
@@ -23,12 +24,18 @@ func _process(delta: float) -> void:
 	elif component_ready and model_scene:
 		move_item(delta)
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	pass
 	
-func move_item(delta):
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+func move_item(delta) -> void:
+	var input_dir:Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var rotation_dir:int = Input.get_axis("rotate_clock", "rotate_counterclock")
+	
 	if input_dir:
 		var tween:Tween = create_tween()
 		tween.tween_property(model_scene, "position:x", model_scene.position.x - (input_dir.x * pan_speed), delta) 
 		tween.tween_property(model_scene, "position:y", model_scene.position.y + (input_dir.y * pan_speed), delta)
+		
+	if rotation_dir: 
+		var tween:Tween = create_tween()
+		tween.tween_property(model_scene, "rotation_degrees:y", model_scene.rotation_degrees.y + (rotation_dir * rot_speed_degrees), delta)
