@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hew8olyeldnc"
-path="res://.godot/imported/Pistol.blend-b33cafeba53440f28f8fc6434845c40a.scn"
+path="res://.godot/imported/Pistol.blend-5fdbca702074e5745810e689766a0787.scn"
 
 [deps]
 
-source_file="res://Pistola/Pistol.blend"
-dest_files=["res://.godot/imported/Pistol.blend-b33cafeba53440f28f8fc6434845c40a.scn"]
+source_file="res://Itens/Pistola/Pistol.blend"
+dest_files=["res://.godot/imported/Pistol.blend-5fdbca702074e5745810e689766a0787.scn"]
 
 [params]
 

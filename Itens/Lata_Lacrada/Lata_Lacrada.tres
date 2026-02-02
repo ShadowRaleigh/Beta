@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cvhxvit3dgyto"]
+
+[ext_resource type="PackedScene" uid="uid://ccx3ppbd810m4" path="res://Itens/Lata_Lacrada/Lata_Lacrada.blend" id="1_d2hck"]
+[ext_resource type="Script" uid="uid://cxbla3vcextmx" path="res://Itens/item.gd" id="1_ds13y"]
+
+[resource]
+script = ExtResource("1_ds13y")
+name = "Lata_Lacrada"
+scene = ExtResource("1_d2hck")
+description = "Uma lata com conteudo desconhecido está muito enferrujada também"
+metadata/_custom_type_script = "uid://cxbla3vcextmx"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7kadi1scp0cd"]
 
 [ext_resource type="Script" uid="uid://c2f55rf5wjxqy" path="res://Inspector/inspector.gd" id="1_wxhdx"]
-[ext_resource type="PackedScene" uid="uid://dhb6yiacidb53" path="res://Pistola/pistol.tscn" id="2_6dy17"]
+[ext_resource type="PackedScene" uid="uid://dhb6yiacidb53" path="res://Itens/Pistola/pistol.tscn" id="2_6dy17"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6dy17"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

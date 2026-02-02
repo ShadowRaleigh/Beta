@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InspectionData" format=3 uid="uid://rsbfthx213jk"]
 
 [ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Inspector/inspection_data.gd" id="1_q5roo"]
-[ext_resource type="PackedScene" uid="uid://hew8olyeldnc" path="res://Pistola/Pistol.blend" id="1_vibb7"]
+[ext_resource type="PackedScene" uid="uid://hew8olyeldnc" path="res://Itens/Pistola/Pistol.blend" id="1_vibb7"]
 
 [resource]
 script = ExtResource("1_q5roo")

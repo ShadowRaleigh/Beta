@@ -1,11 +1,14 @@
+class_name Player
 extends CharacterBody3D
-
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const MAX_ROTATION = 90
 var sensitivity = 0.12
 @onready var head: Node3D = $Head
+
+#Variavel para inventário
+var inventory:Inventory = Inventory.new()
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
