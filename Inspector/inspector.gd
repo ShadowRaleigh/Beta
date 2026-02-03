@@ -102,7 +102,7 @@ func manage_component(delta):
 		i_model = component.idata.model
 		i_name = component.idata.name
 		model_scene = i_model.instantiate()
-		add_child(model_scene)
+		#add_child(model_scene)
 	
 	elif component_ready and model_scene:
 		move_item(delta)

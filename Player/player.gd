@@ -12,6 +12,7 @@ var inventory:Inventory = Inventory.new()
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	GameManager.player_camera = $Head/Camera3D
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion :

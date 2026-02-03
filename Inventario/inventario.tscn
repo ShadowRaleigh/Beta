@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://54laqc25crad" path="res://Inventario/inventario.gd" id="1_07pah"]
 
 [node name="Inventario" type="Node3D" unique_id=1723167752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4076754)
 script = ExtResource("1_07pah")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=278736675]
@@ -16,6 +17,7 @@ render_target_update_mode = 4
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=465026079]
 
 [node name="Marker3D" type="Marker3D" parent="SubViewportContainer/SubViewport" unique_id=2080928644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3056633)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer/SubViewport" unique_id=1567748707]
 
