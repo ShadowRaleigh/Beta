@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://dhb6yiacidb53"]
 
-[ext_resource type="PackedScene" uid="uid://cjfx7ruj48cj5" path="res://Inspector/inspection_component.tscn" id="1_p08hk"]
+[ext_resource type="Script" uid="uid://7bs881k24lwe" path="res://Itens/item_component.gd" id="1_wvjjl"]
 [ext_resource type="Resource" uid="uid://rsbfthx213jk" path="res://Itens/Pistola/pistol_idata.tres" id="2_p08hk"]
 
 [node name="Pistola" type="Node3D" unique_id=1532391]
 
-[node name="Inspection Component" parent="." unique_id=1564298073 instance=ExtResource("1_p08hk")]
+[node name="ItemComponent" type="Node" parent="." unique_id=2132135931]
+script = ExtResource("1_wvjjl")
 idata = ExtResource("2_p08hk")
+metadata/_custom_type_script = "uid://7bs881k24lwe"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1544052395]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D" unique_id=300436067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03176284, 0.16284841)
+depth = 0.625
+polygon = PackedVector2Array(-1.3546038, -1.3838538, -1.237606, 0.2966567, 1.1555262, 0.2647484, 1.1767979, -0.05433616, 0.060002327, -0.34151208, -0.92915916, -1.4051262)
+margin = 0.5

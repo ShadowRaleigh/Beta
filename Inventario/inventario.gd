@@ -1,7 +1,7 @@
 class_name Inventory
 extends Node3D
 
-@export var inventory_items: Array[Item] = []
+@export var inventory_items: Array = []
 @export var spawn_point: Marker3D #Vou usar isso para spawnar o modelo 3d do item a ser exibido
 @export var name_label: Label
 @export var description_label: RichTextEffect

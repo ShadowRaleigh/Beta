@@ -2,7 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Player/player.tscn" id="1_wy3dk"]
 
-[node name="Sala 1" type="Node3D" unique_id=1059648526]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqwtv"]
+albedo_color = Color(0, 0, 0.7294118, 1)
+
+[node name="Sala1" type="Node3D" unique_id=1059648526]
 
 [node name="Player" parent="." unique_id=1898680812 instance=ExtResource("1_wy3dk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0399897, 0)
@@ -44,6 +47,7 @@ size = Vector3(20, 8, 0.5)
 [node name="Table" type="CSGBox3D" parent="." unique_id=1531066794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0852665, -8.784636)
 size = Vector3(3, 1.5, 1)
+material = SubResource("StandardMaterial3D_hqwtv")
 
 [node name="Floor" type="CSGBox3D" parent="." unique_id=890863122]
 use_collision = true

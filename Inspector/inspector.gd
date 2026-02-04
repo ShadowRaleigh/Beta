@@ -1,23 +1,22 @@
 extends Node3D
 
-const PAN_SPEED:float = .05
+const PAN_SPEED:float = .05 
 const ROT_SPEED_DEGREES: float = 1
-const MOUSE_DRAG_FACTOR:float = 15
+const MOUSE_DRAG_FACTOR:float = 15 #Precisa de modificadores pra quando o mouse é usado pra não ficar muito rápido
 const MOUSE_ROT_FACTOR:float = 7
-@onready var pivot: Marker3D = %Pivot
-var frame_duration:float
+var frame_duration:float #Armazena o delta da _process() pra poder repassar pra outras funções
 
 
 
 enum Mouse_Panning {
-	NEUTRAL,
-	DRAGGING,
-	ROTATING
+	NEUTRAL, #Nenhum botão do mouse pressionado
+	DRAGGING, #Botão esquerdo pressioando
+	ROTATING #Botão direito pressionado
 }
 var mouse_state:Mouse_Panning = Mouse_Panning.NEUTRAL
 
 
-@onready var component:InspectionComponent = $"Pistola/Inspection Component"
+@onready var component:ItemComponent = $"Pistola/ItemComponent"
 var component_ready:bool = false
 var i_model:Resource
 var i_name:String
@@ -25,7 +24,7 @@ var i_name:String
 var model_scene:Node3D
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED #faz o mouse aparecer, mas mantém ele preso na tela
 	
 func _process(delta: float) -> void:
 	if not component:
@@ -35,8 +34,8 @@ func _process(delta: float) -> void:
 	manage_component(delta)
 	frame_duration = delta
 
-func _unhandled_input(event: InputEvent) -> void:
-	match mouse_state:
+func _unhandled_input(event: InputEvent) -> void: #
+	match mouse_state: #checa o estado do mouse, e executa o comando baseado no evento
 		Mouse_Panning.NEUTRAL:
 			if event.is_action_pressed("insp_drag"):
 				mouse_state = Mouse_Panning.DRAGGING
@@ -45,8 +44,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		Mouse_Panning.DRAGGING:
 			if event is InputEventMouseMotion:
-				#pivot.rotate_x(deg_to_rad((-event.screen_relative.y * ROT_SPEED_DEGREES) / MOUSE_COMPENSATION_FACTOR))
-				#pivot.rotate_y(deg_to_rad((-event.screen_relative.x * ROT_SPEED_DEGREES) / MOUSE_COMPENSATION_FACTOR))
 				var tween:Tween = create_tween()
 				tween.tween_property(model_scene, "position",
 				Vector3(
@@ -73,7 +70,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if event.is_action_released("insp_rotate"):
 				mouse_state = Mouse_Panning.NEUTRAL
 	
-func move_item(delta) -> void:
+func move_item(delta) -> void: #função pra mover o item
 	var input_dir:Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var rotation_dir:Vector2 = Input.get_vector("rotate_clock_X", "rotate_counterclock_X","rotate_clock_Y", "rotate_counterclock_Y")
 	
@@ -97,12 +94,12 @@ func move_item(delta) -> void:
 						 delta
 						) 
 
-func manage_component(delta):
+func manage_component(delta): #Instancia e gerencia o movimento e estado do modelo, ta meio bunda, mas depois eu refatoro
 	if component_ready and not model_scene:
 		i_model = component.idata.model
 		i_name = component.idata.name
 		model_scene = i_model.instantiate()
-		#add_child(model_scene)
+		add_child(model_scene)
 	
 	elif component_ready and model_scene:
 		move_item(delta)

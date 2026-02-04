@@ -4,7 +4,7 @@ var player_camera: Camera3D
 var inventory_camera: Camera3D
 var inventory_ui: CanvasLayer
 var is_inventory_open: bool = false #Começo com inventário fechado
-@onready var inventario: PackedScene = load("uid://831lsk4t3md6")
+@onready var inventory_scene: PackedScene = load("uid://831lsk4t3md6")
 
 
 func _unhandled_input(event: InputEvent) -> void:
