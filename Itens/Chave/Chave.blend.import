@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://we73ycr0o80"
-path="res://.godot/imported/Chave.blend-c79460178ef7df643e25ffd87d7e5b8e.scn"
+path="res://.godot/imported/chave.blend-f4ed5b9a0da9c971e3fac4f38ea5ab6a.scn"
 
 [deps]
 
-source_file="res://Itens/Chave/Chave.blend"
-dest_files=["res://.godot/imported/Chave.blend-c79460178ef7df643e25ffd87d7e5b8e.scn"]
+source_file="res://Itens/Chave/chave.blend"
+dest_files=["res://.godot/imported/chave.blend-f4ed5b9a0da9c971e3fac4f38ea5ab6a.scn"]
 
 [params]
 

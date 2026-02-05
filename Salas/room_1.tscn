@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://bk5l0vyhe7c78"]
 
 [ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Player/player.tscn" id="1_wy3dk"]
+[ext_resource type="PackedScene" uid="uid://dhb6yiacidb53" path="res://Itens/Pistola/pistol.tscn" id="2_x3fbe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqwtv"]
 albedo_color = Color(0, 0, 0.7294118, 1)
 
 [node name="Sala1" type="Node3D" unique_id=1059648526]
-
-[node name="Player" parent="." unique_id=1898680812 instance=ExtResource("1_wy3dk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0399897, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2002786097]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -18,6 +16,9 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.246549, -9.764977)
 use_collision = true
 size = Vector3(20, 8, 0.5)
+
+[node name="Player" parent="." unique_id=1898680812 instance=ExtResource("1_wy3dk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1145933, 0)
 
 [node name="Wall 2" type="CSGBox3D" parent="." unique_id=1943085199]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2412033, 9.728228)
@@ -45,10 +46,15 @@ use_collision = true
 size = Vector3(20, 8, 0.5)
 
 [node name="Table" type="CSGBox3D" parent="." unique_id=1531066794]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0852665, -8.784636)
-size = Vector3(3, 1.5, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8806304, -8.784636)
+size = Vector3(3, 1.3, 1)
 material = SubResource("StandardMaterial3D_hqwtv")
 
 [node name="Floor" type="CSGBox3D" parent="." unique_id=890863122]
 use_collision = true
 size = Vector3(20, 0.5, 20)
+
+[node name="Pistola" parent="." unique_id=1532391 instance=ExtResource("2_x3fbe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01165244, 3.015455, -8.850281)
+
+[editable path="Pistola"]

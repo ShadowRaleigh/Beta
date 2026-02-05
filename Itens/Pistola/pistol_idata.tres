@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="InspectionData" format=3 uid="uid://rsbfthx213jk"]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ckho4q7216acf"]
 
-[ext_resource type="PackedScene" uid="uid://hew8olyeldnc" path="res://Itens/Pistola/Pistol.blend" id="1_420am"]
-[ext_resource type="Script" uid="uid://c2f55rf5wjxqy" path="res://Inspector/inspector.gd" id="2_mvw8w"]
+[ext_resource type="PackedScene" uid="uid://hew8olyeldnc" path="res://Itens/Pistola/pistol.blend" id="1_420am"]
+[ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_rthcr"]
 
 [resource]
-script = ExtResource("2_mvw8w")
-name = "Pistol"
+script = ExtResource("1_rthcr")
+name = "Pistola"
 model = ExtResource("1_420am")
+description = "Uma Pistola"
 metadata/_custom_type_script = "uid://d2vhr18entnol"

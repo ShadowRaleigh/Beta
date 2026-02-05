@@ -7,7 +7,7 @@ extends Node3D
 var indice_atual: int = 0
 var item_instanciado: Node = null
 
-func _ready() -> void:
+'''func _ready() -> void:
 	exibir_item(indice_atual)
 
 #Função para navegar no inventário
@@ -19,4 +19,4 @@ func mudar_indice(direcao:int) -> void:
 	indice_atual += direcao
 	# Sistema circular, se passar do fim volta para ao início
 	if indice_atual >= lista_de_itens(): indice_atual = 0
-	elif indice_atual < 0: indice_atual = lista_de_itens.size() - 1
+	elif indice_atual < 0: indice_atual = lista_de_itens.size() - 1'''

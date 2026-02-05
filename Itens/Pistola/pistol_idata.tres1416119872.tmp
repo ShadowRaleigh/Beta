@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://rsbfthx213jk"]
+
+[ext_resource type="PackedScene" uid="uid://hew8olyeldnc" path="res://Itens/Pistola/pistol.blend" id="1_420am"]
+[ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="2_420am"]
+
+[resource]
+script = ExtResource("2_420am")
+name = "Pistola"
+model = ExtResource("1_420am")
+description = "Uma pistola"
+metadata/_custom_type_script = "uid://d2vhr18entnol"
