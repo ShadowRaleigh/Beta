@@ -6,9 +6,7 @@
 albedo_color = Color(0.08468998, 0.08468991, 0.08468992, 1)
 
 [node name="Inventario" type="Node3D" unique_id=1723167752]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4076754)
 script = ExtResource("1_07pah")
-inventory_items = null
 
 [node name="Wall 1" type="CSGBox3D" parent="." unique_id=1884494962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059711337, -0.0847038, -0.63363826)
