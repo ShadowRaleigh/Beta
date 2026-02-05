@@ -2,37 +2,24 @@
 
 [ext_resource type="Script" uid="uid://54laqc25crad" path="res://Inventario/inventario.gd" id="1_07pah"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07pah"]
+albedo_color = Color(0.08468998, 0.08468991, 0.08468992, 1)
+
 [node name="Inventario" type="Node3D" unique_id=1723167752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4076754)
 script = ExtResource("1_07pah")
+inventory_items = null
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=278736675]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Wall 1" type="CSGBox3D" parent="." unique_id=1884494962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059711337, -0.0847038, -0.63363826)
+use_collision = true
+size = Vector3(3, 2, 0.1)
+material = SubResource("StandardMaterial3D_07pah")
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=2119179229]
-handle_input_locally = false
-render_target_update_mode = 4
+[node name="Camera3D" type="Camera3D" parent="." unique_id=534666716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.41054827)
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=465026079]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2072343207]
+transform = Transform3D(0.8661337, 0.05580217, 0.49668768, -0.20293958, 0.9474092, 0.24744993, -0.45675826, -0.31512228, 0.8319074, 1.413262, 0.9692545, 2.0432794)
 
-[node name="Marker3D" type="Marker3D" parent="SubViewportContainer/SubViewport" unique_id=2080928644]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3056633)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer/SubViewport" unique_id=1567748707]
-
-[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/CanvasLayer" unique_id=1918758588]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/SubViewport/CanvasLayer" unique_id=1297009178]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton" type="TextureButton" parent="SubViewportContainer/SubViewport/CanvasLayer" unique_id=17668686]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton2" type="TextureButton" parent="SubViewportContainer/SubViewport/CanvasLayer" unique_id=770950739]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ItemHolder" type="Marker3D" parent="." unique_id=1661159384]

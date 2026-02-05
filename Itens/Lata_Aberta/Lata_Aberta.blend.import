@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c65kqgxc7cfdj"
-path="res://.godot/imported/lata_aberta.blend-762a9621095a84cd29507ab421561583.scn"
+path="res://.godot/imported/Lata_Aberta.blend-0dd4682d0ba416f49373a1389b52377b.scn"
 
 [deps]
 
-source_file="res://Itens/Lata_Aberta/lata_aberta.blend"
-dest_files=["res://.godot/imported/lata_aberta.blend-762a9621095a84cd29507ab421561583.scn"]
+source_file="res://Itens/Lata_Aberta/Lata_Aberta.blend"
+dest_files=["res://.godot/imported/Lata_Aberta.blend-0dd4682d0ba416f49373a1389b52377b.scn"]
 
 [params]
 

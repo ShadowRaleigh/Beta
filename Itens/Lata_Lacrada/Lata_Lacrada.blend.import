@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ccx3ppbd810m4"
-path="res://.godot/imported/lata_lacrada.blend-afb4f0f9010ecc3efa9c435ddef715c3.scn"
+path="res://.godot/imported/Lata_Lacrada.blend-60b802b4ce3b3d559e05200f1a40c1b1.scn"
 
 [deps]
 
-source_file="res://Itens/Lata_Lacrada/lata_lacrada.blend"
-dest_files=["res://.godot/imported/lata_lacrada.blend-afb4f0f9010ecc3efa9c435ddef715c3.scn"]
+source_file="res://Itens/Lata_Lacrada/Lata_Lacrada.blend"
+dest_files=["res://.godot/imported/Lata_Lacrada.blend-60b802b4ce3b3d559e05200f1a40c1b1.scn"]
 
 [params]
 
