@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://db0emrl3t8wiw"
-path="res://.godot/imported/Chave.blend-c79460178ef7df643e25ffd87d7e5b8e.scn"
+uid="uid://e1srneukpjb8"
+path="res://.godot/imported/Porta-de-madeira-rustica.blend-406ef447ba90b84fcc123be82b6307af.scn"
 
 [deps]
 
-source_file="res://Itens/Chave/Chave.blend"
-dest_files=["res://.godot/imported/Chave.blend-c79460178ef7df643e25ffd87d7e5b8e.scn"]
+source_file="res://Itens/Porta/Porta-de-madeira-rustica.blend"
+dest_files=["res://.godot/imported/Porta-de-madeira-rustica.blend-406ef447ba90b84fcc123be82b6307af.scn"]
 
 [params]
 
@@ -40,8 +40,8 @@ materials/extract_path=""
 _subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=false
-blender/nodes/cameras=false
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false

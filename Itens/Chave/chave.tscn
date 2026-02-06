@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://daamjyh4461n7"]
 
 [ext_resource type="Script" uid="uid://7bs881k24lwe" path="res://Itens/item_component.gd" id="1_q530p"]
+[ext_resource type="Script" uid="uid://r2ayiy4m6gv4" path="res://Itens/item.gd" id="1_sf3d3"]
 [ext_resource type="Resource" uid="uid://bw6psvmqxho7t" path="res://Itens/Chave/chave_idata.tres" id="2_sf3d3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3iusm"]
 size = Vector3(1.135, 0.2, 0.5)
 
-[node name="Chave" type="Node3D" unique_id=1217838423]
+[node name="Chave" type="Node3D" unique_id=5760611 node_paths=PackedStringArray("item_component")]
+transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, 0, 0, 0)
+script = ExtResource("1_sf3d3")
+item_component = NodePath("ItemComponent")
+metadata/_custom_type_script = "uid://r2ayiy4m6gv4"
 
 [node name="ItemComponent" type="Node" parent="." unique_id=718387538]
 script = ExtResource("1_q530p")

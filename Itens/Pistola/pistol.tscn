@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://dhb6yiacidb53"]
 
+[ext_resource type="Script" uid="uid://r2ayiy4m6gv4" path="res://Itens/item.gd" id="1_umdec"]
 [ext_resource type="Script" uid="uid://7bs881k24lwe" path="res://Itens/item_component.gd" id="1_wvjjl"]
 [ext_resource type="Resource" uid="uid://ckho4q7216acf" path="res://Itens/Pistola/pistol_idata.tres" id="2_p08hk"]
 
-[node name="Pistola" type="Node3D" unique_id=1532391]
+[node name="Pistola" type="Node3D" unique_id=2093063672 node_paths=PackedStringArray("item_component")]
+script = ExtResource("1_umdec")
+item_component = NodePath("ItemComponent")
+metadata/_custom_type_script = "uid://r2ayiy4m6gv4"
 
 [node name="ItemComponent" type="Node" parent="." unique_id=2132135931]
 script = ExtResource("1_wvjjl")

@@ -1,23 +1,20 @@
 class_name Inventory
 extends Node3D
 
-@export var lista_de_itens: Array[Node3D] = []
+@export var lista_de_itens: Array[Item] = []
 @onready var item_holder: Marker3D = $ItemHolder
-
 
 var indice_atual: int = 0
 var item_instanciado: Node = null
 
 func _ready() -> void:
-	var cena_chave: PackedScene = load("uid://daamjyh4461n7")
-	var chave: Node3D = cena_chave.instantiate()
-	item_holder.add_child(chave)
-	lista_de_itens.append(chave)
+	if  GameManager.inventory_list:
+		lista_de_itens = GameManager.inventory_list
 	exibir_item(indice_atual)
 
 #Função para navegar no inventário
-func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_rigth"): mudar_indice(1)
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_right"): mudar_indice(1)
 	elif Input.is_action_just_pressed("ui_left"): mudar_indice(-1)
 
 func mudar_indice(direcao:int) -> void:
@@ -34,9 +31,8 @@ func exibir_item(index: int):
 		item_instanciado.queue_free()
 	
 	# Instancia o novo item
-	var novo_item_res= lista_de_itens[index]
-	if novo_item_res.ItemComponent.idata.model:
-		item_instanciado = novo_item_res.scene.instantiate()
+	var novo_item_res: Item = lista_de_itens[index]
+	if novo_item_res.item_component.idata.model:
+		item_instanciado = novo_item_res.item_component.idata.model.instantiate()
 		item_holder.add_child(item_instanciado)
-		# Opcional: Resetar a posição local para garantir que fique no centro
 		item_instanciado.position = Vector3.ZERO
