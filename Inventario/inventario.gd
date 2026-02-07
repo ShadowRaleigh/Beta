@@ -3,6 +3,7 @@ extends Node3D
 
 @export var lista_de_itens: Array[Item] = []
 @onready var item_holder: Marker3D = $ItemHolder
+@onready var som_mudanca: AudioStreamPlayer = $som_mudanca
 
 var indice_atual: int = 0
 var item_instanciado: Node = null
@@ -22,8 +23,16 @@ func _process(delta: float) -> void:
 
 #Função para navegar no inventário
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_right"): mudar_indice(1)
-	elif Input.is_action_just_pressed("ui_left"): mudar_indice(-1)
+	if Input.is_action_just_pressed("ui_right"): 
+		mudar_indice(1)
+		tocar_som()
+	elif Input.is_action_just_pressed("ui_left"): 
+		mudar_indice(-1)
+		tocar_som()
+
+func tocar_som() -> void:
+	som_mudanca.pitch_scale = randf_range(0.9, 1.1) #Cara do video mostrou que isso muda o pitch não deixando repetitivo o som
+	som_mudanca.play()
 
 func mudar_indice(direcao:int) -> void:
 	indice_atual += direcao

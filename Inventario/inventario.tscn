@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dhb6yiacidb53" path="res://Itens/Pistola/pistol.tscn" id="4_4i6mf"]
 [ext_resource type="PackedScene" uid="uid://bnso23d6i73xn" path="res://Itens/Lata_Lacrada/lata_lacrada.tscn" id="4_6d8a0"]
 [ext_resource type="PackedScene" uid="uid://daamjyh4461n7" path="res://Itens/Chave/chave.tscn" id="5_4wk8m"]
+[ext_resource type="AudioStream" uid="uid://bel110c58w5wk" path="res://Sound Efect/Som de Inventário.wav" id="6_4i6mf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07pah"]
 albedo_color = Color(0.08468998, 0.08468991, 0.08468992, 1)
@@ -41,3 +42,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6681561, 0, 2.4598975)
 
 [node name="Chave" parent="." unique_id=1927793508 instance=ExtResource("5_4wk8m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9154415, 0, 2.7851791)
+
+[node name="som_mudanca" type="AudioStreamPlayer" parent="." unique_id=185133755]
+stream = ExtResource("6_4i6mf")
