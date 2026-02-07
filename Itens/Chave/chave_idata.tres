@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bw6psvmqxho7t"]
 
-[ext_resource type="PackedScene" uid="uid://db0emrl3t8wiw" path="res://Itens/Chave/Chave.blend" id="1_7tj76"]
+[ext_resource type="PackedScene" uid="uid://sl8v7ftgapm2" path="res://Itens/Chave/Chave.blend" id="1_7tj76"]
 [ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_c5nng"]
 
 [resource]

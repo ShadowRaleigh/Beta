@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://db0emrl3t8wiw"
+uid="uid://sl8v7ftgapm2"
 path="res://.godot/imported/Chave.blend-c79460178ef7df643e25ffd87d7e5b8e.scn"
 
 [deps]
@@ -40,8 +40,8 @@ materials/extract_path=""
 _subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=false
-blender/nodes/cameras=false
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false

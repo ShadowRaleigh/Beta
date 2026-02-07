@@ -6,11 +6,19 @@ extends Node3D
 
 var indice_atual: int = 0
 var item_instanciado: Node = null
+@export var velocidade_rotacao: float = 1.0
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if  GameManager.inventory_list:
 		lista_de_itens = GameManager.inventory_list
 	exibir_item(indice_atual)
+
+"Nova função para rotação"
+func _process(delta: float) -> void:
+	if item_instanciado and item_instanciado is Node3D:
+		item_instanciado.rotate_y(velocidade_rotacao * delta)
+"--------------------------------------------------------------"
 
 #Função para navegar no inventário
 func _input(_event: InputEvent) -> void:

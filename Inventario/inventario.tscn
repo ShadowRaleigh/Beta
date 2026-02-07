@@ -1,36 +1,43 @@
 [gd_scene format=3 uid="uid://831lsk4t3md6"]
 
 [ext_resource type="Script" uid="uid://54laqc25crad" path="res://Inventario/inventario.gd" id="1_07pah"]
-[ext_resource type="PackedScene" uid="uid://daamjyh4461n7" path="res://Itens/Chave/chave.tscn" id="2_6d8a0"]
 [ext_resource type="PackedScene" uid="uid://jhh6gg5gy0f6" path="res://Itens/Lata_Aberta/lata_aberta.tscn" id="3_4wk8m"]
 [ext_resource type="PackedScene" uid="uid://dhb6yiacidb53" path="res://Itens/Pistola/pistol.tscn" id="4_4i6mf"]
+[ext_resource type="PackedScene" uid="uid://bnso23d6i73xn" path="res://Itens/Lata_Lacrada/lata_lacrada.tscn" id="4_6d8a0"]
+[ext_resource type="PackedScene" uid="uid://daamjyh4461n7" path="res://Itens/Chave/chave.tscn" id="5_4wk8m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07pah"]
 albedo_color = Color(0.08468998, 0.08468991, 0.08468992, 1)
 
 [node name="Inventario" type="Node3D" unique_id=1723167752 node_paths=PackedStringArray("lista_de_itens")]
 script = ExtResource("1_07pah")
-lista_de_itens = [NodePath("Chave"), NodePath("LataAberta"), NodePath("Pistola")]
+lista_de_itens = [NodePath("LataAberta"), NodePath("Pistola"), NodePath("lata_lacrada"), NodePath("Chave")]
+velocidade_rotacao = 0.8
 
 [node name="Wall 1" type="CSGBox3D" parent="." unique_id=1884494962]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059711337, -0.0847038, -0.63363826)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16411197, -0.17613447, -0.63363826)
 use_collision = true
-size = Vector3(3, 2, 0.1)
+size = Vector3(4.201233, 3.1330566, 0.1)
 material = SubResource("StandardMaterial3D_07pah")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=534666716]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.41054827)
+transform = Transform3D(1, 0, 0, 0, 0.9622133, 0.27229705, 0, -0.27229705, 0.9622133, 0, 0.10787815, 0.41054827)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2072343207]
-transform = Transform3D(0.8661337, 0.05580217, 0.49668768, -0.20293958, 0.9474092, 0.24744993, -0.45675826, -0.31512228, 0.8319074, 1.413262, 0.9692545, 2.0432794)
+transform = Transform3D(0.86613345, 0.055802196, 0.4966879, -0.43617737, 0.5696254, 0.6966176, -0.24405327, -0.82000774, 0.5177113, 1.4092692, 1.8672245, 2.0432794)
+sky_mode = 1
 
 [node name="ItemHolder" type="Marker3D" parent="." unique_id=1661159384]
-
-[node name="Chave" parent="." unique_id=5760611 instance=ExtResource("2_6d8a0")]
-transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, 0, 0, 1.2725582)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="LataAberta" parent="." unique_id=1747698404 instance=ExtResource("3_4wk8m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015627027, 0, 3.0037227)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1376812, 0, 3.0037227)
 
 [node name="Pistola" parent="." unique_id=2093063672 instance=ExtResource("4_4i6mf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21784902, 0, 2.6747737)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15612483, 0, 2.6747737)
+
+[node name="lata_lacrada" parent="." unique_id=1516270938 instance=ExtResource("4_6d8a0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6681561, 0, 2.4598975)
+
+[node name="Chave" parent="." unique_id=1927793508 instance=ExtResource("5_4wk8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9154415, 0, 2.7851791)

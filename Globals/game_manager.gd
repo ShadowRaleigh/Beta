@@ -15,6 +15,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 			close_inventory() #chama func de fechar o inventário
 		else:                 #se não
 			open_inventory()  #chama func de abrir o inventário
+		get_viewport().set_input_as_handled()
 
 func open_inventory() -> void:
 	inventory_instance = inventory_scene.instantiate() #instantiate cria uma instancia da cena inventory
@@ -30,7 +31,15 @@ func open_inventory() -> void:
 
 func close_inventory() -> void:
 	if inventory_instance != null:
-		inventory_instance.queue_free() # Remove o nó da cena e libera a memória
-		inventory_instance = null       # Limpa a referência para evitar erros futuros
+		inventory_instance.queue_free() # Remove o nó da cena liberando a memória
+		inventory_instance = null       # volta a referencia para null
+	
+	
+	# Busca a câmera do jogador pelo grupo e força ela a ser a ativa
+	var main_camera = get_tree().get_first_node_in_group("MainCamera")
+	if main_camera:
+		main_camera.make_current() # Força a visão a voltar para o jogador
+	
+	
 		is_inventory_open = false
 		get_tree().paused = false
