@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cnlvmt1icmyrp"]
+
+[ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_layug"]
+[ext_resource type="PackedScene" uid="uid://dlge7ek34pxka" path="res://Itens/Abridor/Abridor.blend" id="1_lrj5u"]
+
+[resource]
+script = ExtResource("1_layug")
+name = "Abridor"
+model = ExtResource("1_lrj5u")
+description = "Definitivamente não abre uma porta mesmo tendo o nome abridor"
+metadata/_custom_type_script = "uid://d2vhr18entnol"

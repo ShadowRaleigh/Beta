@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b4pyykmcjwrrm"]
+
+[ext_resource type="Script" uid="uid://r2ayiy4m6gv4" path="res://Itens/item.gd" id="1_02c5h"]
+[ext_resource type="Script" uid="uid://7bs881k24lwe" path="res://Itens/item_component.gd" id="2_tx7m8"]
+[ext_resource type="Resource" uid="uid://cnlvmt1icmyrp" path="res://Itens/Abridor/abridor_idata.tres" id="3_jskql"]
+
+[node name="abridor" type="Node3D" unique_id=1216132163 node_paths=PackedStringArray("item_component")]
+script = ExtResource("1_02c5h")
+item_component = NodePath("ItemComponent")
+metadata/_custom_type_script = "uid://r2ayiy4m6gv4"
+
+[node name="ItemComponent" type="Node" parent="." unique_id=1685654191]
+script = ExtResource("2_tx7m8")
+idata = ExtResource("3_jskql")
+metadata/_custom_type_script = "uid://7bs881k24lwe"
