@@ -15,7 +15,7 @@ func _run():
 	# 2. Testar propriedades básicas (Dados)
 	print("Resource Name (Nativo): ", receita.resource_name)
 	print("Recipe Name (Customizado): ", receita.recipe_name)
-	assert(receita.name != "", "Erro: O nome da receita está vazio!")
+	assert(receita.resource_name != "", "Erro: O nome da receita está vazio!")
 	
 	# Verifica se existem ingredientes e resultados
 	print("Qtd. Ingredientes: ", receita.ingredients.size())
