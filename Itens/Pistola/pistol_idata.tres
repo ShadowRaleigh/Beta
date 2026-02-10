@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ckho4q7216acf"]
 
-[ext_resource type="PackedScene" uid="uid://hew8olyeldnc" path="res://Itens/Pistola/pistol.blend" id="1_420am"]
+[ext_resource type="PackedScene" uid="uid://cxdra2dauphjx" path="res://Itens/Pistola/Pistola.blend" id="1_420am"]
 [ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_rthcr"]
 
 [resource]

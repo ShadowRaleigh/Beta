@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dsvpqui836i14"]
 
 [ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_1gkl8"]
-[ext_resource type="PackedScene" uid="uid://c65kqgxc7cfdj" path="res://Itens/Lata_Aberta/Lata_Aberta.blend" id="1_y48o8"]
+[ext_resource type="PackedScene" uid="uid://bl3378kikfn74" path="res://Itens/Lata_Aberta/Lata_Aberta.blend" id="1_y48o8"]
 
 [resource]
 script = ExtResource("1_1gkl8")

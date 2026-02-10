@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bvgw8fugcvh71"]
 
-[ext_resource type="PackedScene" uid="uid://ccx3ppbd810m4" path="res://Itens/Lata_Lacrada/Lata_Lacrada.blend" id="1_ag3jh"]
+[ext_resource type="PackedScene" uid="uid://cpbmuyinpqi58" path="res://Itens/Lata_Lacrada/Lata_Lacrada.blend" id="1_ag3jh"]
 [ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="2_783hd"]
 
 [resource]

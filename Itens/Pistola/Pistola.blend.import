@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://hew8olyeldnc"
-path="res://.godot/imported/Pistol.blend-5fdbca702074e5745810e689766a0787.scn"
+uid="uid://cxdra2dauphjx"
+path="res://.godot/imported/Pistola.blend-badc4ef5914a7a8c9f813ca9c728d0f1.scn"
 
 [deps]
 
-source_file="res://Itens/Pistola/Pistol.blend"
-dest_files=["res://.godot/imported/Pistol.blend-5fdbca702074e5745810e689766a0787.scn"]
+source_file="res://Itens/Pistola/Pistola.blend"
+dest_files=["res://.godot/imported/Pistola.blend-badc4ef5914a7a8c9f813ca9c728d0f1.scn"]
 
 [params]
 
@@ -28,7 +28,7 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=false
+animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
@@ -40,8 +40,8 @@ materials/extract_path=""
 _subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=false
-blender/nodes/cameras=false
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false
