@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bljog73y0s4pv"]
+
+[node name="Hotbar" type="Control" unique_id=883012317]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=133943745]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=719985493]
+offset_left = 459.0
+offset_top = 575.0
+offset_right = 706.0
+offset_bottom = 622.0
+
+[node name="Sloot1" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=520772818]
+layout_mode = 2
+
+[node name="Sloot2" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=1656195260]
+layout_mode = 2
+
+[node name="Sloot3" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=1704792769]
+layout_mode = 2

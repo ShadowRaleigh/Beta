@@ -9,7 +9,7 @@ var inventory_instance: Node = null
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
-	
+
 	elif Input.is_action_just_pressed("toggle_inventory"): 
 		if is_inventory_open: #Se is_inventory_open for verdadeiro ou seja 1
 			close_inventory() #chama func de fechar o inventário
