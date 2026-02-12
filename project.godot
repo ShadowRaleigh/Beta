@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://dvqsxnfiyuqrs"
+Hotbar="*uid://bljog73y0s4pv"
 
 [display]
 

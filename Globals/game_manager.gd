@@ -43,3 +43,24 @@ func close_inventory() -> void:
 	
 		is_inventory_open = false
 		get_tree().paused = false
+
+
+"----------------------Seção do sistema de Equipar-----------------------"
+signal inventory_updated # Avisa a UI para atualizar o desenho
+signal slot_selected(index) # Avisa o slotativo
+
+var hotbar_items: Array = [null, null, null] #Array com os 3 slots
+
+var current_slot_index: int = 0 #inicio no indice 0 ou seja 1° posição
+
+func equip_item_to_active_slot(item_resource):
+	hotbar_items[current_slot_index] = item_resource
+	inventory_updated.emit()
+
+func change_slot_selection(direction: int):
+	current_slot_index = (current_slot_index + direction) % hotbar_items.size()
+	# Correção para módulo negativo (scroll para cima no índice 0)
+	if current_slot_index < 0:
+		current_slot_index = hotbar_items.size() - 1
+	
+	slot_selected.emit(current_slot_index)

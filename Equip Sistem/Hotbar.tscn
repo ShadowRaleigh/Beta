@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://bljog73y0s4pv"]
 
+[ext_resource type="Script" uid="uid://bk3okbfhbd55p" path="res://Equip Sistem/hotbar.gd" id="1_m2ewg"]
+[ext_resource type="Texture2D" uid="uid://fkeqpuo5b8o1" path="res://Equip Sistem/sloot.png" id="2_gj4jq"]
+[ext_resource type="Texture2D" uid="uid://dl1uvkviuuddm" path="res://Equip Sistem/borda.png" id="3_fl10b"]
+
 [node name="Hotbar" type="Control" unique_id=883012317]
 layout_mode = 3
 anchors_preset = 15
@@ -7,14 +11,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_m2ewg")
+empty_slot_texture = ExtResource("2_gj4jq")
+selection_border_texture = ExtResource("3_fl10b")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=133943745]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=719985493]
 offset_left = 459.0
-offset_top = 575.0
-offset_right = 706.0
-offset_bottom = 622.0
+offset_top = 566.0
+offset_right = 660.0
+offset_bottom = 595.0
 
 [node name="Sloot1" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=520772818]
 layout_mode = 2

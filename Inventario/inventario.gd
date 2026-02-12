@@ -8,6 +8,9 @@ extends Node3D
 @onready var nome_label: Label = %Nome
 @onready var descricao_label: RichTextLabel = %Descrição
 
+@onready var next_button = $Control/next_button
+@onready var last_button = $Control/last_button
+
 var indice_atual: int = 0
 var item_instanciado: Node = null
 @export var velocidade_rotacao: float = 1.0
@@ -72,3 +75,12 @@ func exibir_item(index: int):
 	if novo_item_res.item_component.idata:
 		nome_label.text = novo_item_res.item_component.idata.name
 		descricao_label.text = novo_item_res.item_component.idata.description
+
+
+func _on_next_button_pressed() -> void:
+	mudar_indice(1)
+	tocar_som()
+
+func _on_last_button_pressed() -> void:
+	mudar_indice(-1)
+	tocar_som()

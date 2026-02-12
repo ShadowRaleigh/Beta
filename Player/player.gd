@@ -6,13 +6,25 @@ const JUMP_VELOCITY = 4.5
 const MAX_ROTATION = 90
 var sensitivity = 0.12
 @onready var head: Node3D = $Head
+@onready var hand_sprite = $HandSprite # O nó que mostra o item
 
 #Variavel para inventário
 var inventory:Inventory = Inventory.new()
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
+
+
+# Função que será conectada ao sinal da Hotbar
+func _on_hotbar_item_changed(new_item_texture):
+	if new_item_texture:
+		hand_sprite.texture = new_item_texture
+		hand_sprite.visible = true
+	else:
+		# Se não houver item (caso de null), esconde a mão
+		hand_sprite.visible = false
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion :
 		head.rotate_x(deg_to_rad(-event.screen_relative.y * sensitivity))
