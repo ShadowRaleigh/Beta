@@ -12,9 +12,9 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 	elif Input.is_action_just_pressed("toggle_inventory"): 
 		if is_inventory_open: #Se is_inventory_open for verdadeiro ou seja 1
-			close_inventory() #chama func de fechar o inventário
-		else:                 #se não
-			open_inventory()  #chama func de abrir o inventário
+			close_inventory()
+		else:                
+			open_inventory()  
 		get_viewport().set_input_as_handled()
 
 func open_inventory() -> void:
@@ -26,20 +26,18 @@ func open_inventory() -> void:
 	if inv_camera:
 		inv_camera.make_current() #faz a camera do inventário ser a camera de uso atual
 	
-	is_inventory_open = true #atualiza do estado do inventário
-	get_tree().paused = true #pausa a cena, pausando o jogo
+	is_inventory_open = true
+	get_tree().paused = true
 
 func close_inventory() -> void:
 	if inventory_instance != null:
-		inventory_instance.queue_free() # Remove o nó da cena liberando a memória
-		inventory_instance = null       # volta a referencia para null
-	
+		inventory_instance.queue_free()
+		inventory_instance = null
 	
 	# Busca a câmera do jogador pelo grupo e força ela a ser a ativa
 	var main_camera = get_tree().get_first_node_in_group("MainCamera")
 	if main_camera:
 		main_camera.make_current() # Força a visão a voltar para o jogador
-	
 	
 		is_inventory_open = false
 		get_tree().paused = false
@@ -47,7 +45,7 @@ func close_inventory() -> void:
 
 "----------------------Seção do sistema de Equipar-----------------------"
 signal inventory_updated # Avisa a UI para atualizar o desenho
-signal slot_selected(index) # Avisa o slotativo
+signal slot_selected(index) # Avisa o slot ativo
 
 var hotbar_items: Array = [null, null, null] #Array com os 3 slots
 

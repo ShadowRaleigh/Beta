@@ -98,5 +98,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9154415, 0, 2.7851791)
 [node name="som_mudanca" type="AudioStreamPlayer" parent="." unique_id=185133755]
 stream = ExtResource("6_4i6mf")
 
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/next_button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Control/last_button" to="." method="_on_last_button_pressed"]

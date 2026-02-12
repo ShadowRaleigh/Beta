@@ -1,7 +1,7 @@
 extends Control
 
 @onready var slots_container = $CanvasLayer/HBoxContainer
-@onready var slots = slots_container.get_children()
+@onready var slots: Array[Node] = slots_container.get_children()
 
 @export var empty_slot_texture: Texture2D 
 @export var selection_border_texture: Texture2D # Textura para indicar seleção (borda)
@@ -23,11 +23,9 @@ func _unhandled_input(event):
 
 func update_ui():
 	for i in range(slots.size()):
-		if i >= GameManager.hotbar_items.size(): break
-		
+		if i >= GameManager.hotbar_items.size(): break    
 		var item = GameManager.hotbar_items[i]
-		var slot_ui = slots[i]
-		
+		var slot_ui = slots[i] # Supondo que slots[i] seja um TextureRect ou Button  
 		if item:
 			slot_ui.texture = item.icon 
 		else:

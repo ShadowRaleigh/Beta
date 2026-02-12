@@ -4,6 +4,7 @@ extends Node3D
 @export var lista_de_itens: Array[Item] = []
 @onready var item_holder: Marker3D = $ItemHolder
 @onready var som_mudanca: AudioStreamPlayer = $som_mudanca
+@onready var button: Button = $Control/Button
 
 @onready var nome_label: Label = %Nome
 @onready var descricao_label: RichTextLabel = %Descrição
@@ -11,9 +12,11 @@ extends Node3D
 @onready var next_button = $Control/next_button
 @onready var last_button = $Control/last_button
 
+var novo_item_res: Item
 var indice_atual: int = 0
 var item_instanciado: Node = null
 @export var velocidade_rotacao: float = 1.0
+signal item_equip()
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -61,7 +64,7 @@ func exibir_item(index: int):
 		item_instanciado.queue_free()
 	
 	# 2. Obter o recurso do item atual
-	var novo_item_res: Item = lista_de_itens[index]
+	novo_item_res = lista_de_itens[index]
 	 
 	# 3. Instanciar o modelo 3D
 	if novo_item_res.item_component.idata.model:
@@ -70,8 +73,6 @@ func exibir_item(index: int):
 		item_instanciado.position = Vector3.ZERO
 		
 	# 4. ATUALIZAR A INTERFACE DE USUÁRIO (UI)
-	# Acessa os dados do recurso e atualiza os Labels
-	# Verifique os nomes exatos das variáveis no seu script 'Item' ou 'ItemData'
 	if novo_item_res.item_component.idata:
 		nome_label.text = novo_item_res.item_component.idata.name
 		descricao_label.text = novo_item_res.item_component.idata.description
@@ -84,3 +85,9 @@ func _on_next_button_pressed() -> void:
 func _on_last_button_pressed() -> void:
 	mudar_indice(-1)
 	tocar_som()
+
+func _on_button_pressed() -> void:
+	if novo_item_res and novo_item_res.item_component and novo_item_res.item_component.idata:
+		var item_data = novo_item_res.item_component.idata
+		GameManager.equip_item_to_active_slot(item_data)
+		print("Item enviado para o slot: ", GameManager.current_slot_index)

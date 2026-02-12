@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_layug"]
 [ext_resource type="PackedScene" uid="uid://dy31ykbxhom5w" path="res://Itens/Abridor/Abridor.blend" id="1_lrj5u"]
+[ext_resource type="Texture2D" uid="uid://c1uo2nbv7gbbu" path="res://Itens/Abridor/Abridor.png" id="1_r3yw1"]
 
 [resource]
 script = ExtResource("1_layug")
 name = "Abridor"
 model = ExtResource("1_lrj5u")
 description = "Definitivamente não abre uma porta mesmo tendo o nome abridor"
+icon = ExtResource("1_r3yw1")
 metadata/_custom_type_script = "uid://d2vhr18entnol"
