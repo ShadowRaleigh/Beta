@@ -8,4 +8,5 @@ script = ExtResource("1_rthcr")
 name = "Pistola"
 model = ExtResource("1_420am")
 description = "Uma Pistola"
+item_scene_path = "uid://dhb6yiacidb53"
 metadata/_custom_type_script = "uid://d2vhr18entnol"

@@ -10,4 +10,5 @@ name = "Lata Lacrada"
 model = ExtResource("1_ag3jh")
 description = "Uma lata que ainda não foi aberta"
 icon = ExtResource("1_783hd")
+item_scene_path = "uid://bnso23d6i73xn"
 metadata/_custom_type_script = "uid://d2vhr18entnol"

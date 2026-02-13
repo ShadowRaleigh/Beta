@@ -6,11 +6,12 @@ var is_inventory_open: bool = false #Começo com inventário fechado
 @onready var inventory_scene: PackedScene = load("uid://831lsk4t3md6")
 var inventory_instance: Node = null
 
-func _unhandled_input(_event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 
-	elif Input.is_action_just_pressed("toggle_inventory"): 
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("toggle_inventory"): 
 		if is_inventory_open: #Se is_inventory_open for verdadeiro ou seja 1
 			close_inventory()
 		else:                
@@ -27,7 +28,8 @@ func open_inventory() -> void:
 		inv_camera.make_current() #faz a camera do inventário ser a camera de uso atual
 	
 	is_inventory_open = true
-	get_tree().paused = true
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	#get_tree().paused = true
 
 func close_inventory() -> void:
 	if inventory_instance != null:
@@ -40,20 +42,35 @@ func close_inventory() -> void:
 		main_camera.make_current() # Força a visão a voltar para o jogador
 	
 		is_inventory_open = false
-		get_tree().paused = false
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		#get_tree().paused = false
 
 
 "----------------------Seção do sistema de Equipar-----------------------"
-signal inventory_updated # Avisa a UI para atualizar o desenho
+signal hotbar_updated # Avisa a UI para atualizar o desenho
 signal slot_selected(index) # Avisa o slot ativo
 
 var hotbar_items: Array = [null, null, null] #Array com os 3 slots
 
 var current_slot_index: int = 0 #inicio no indice 0 ou seja 1° posição
 
-func equip_item_to_active_slot(item_resource):
-	hotbar_items[current_slot_index] = item_resource
-	inventory_updated.emit()
+func equip_item_to_active_slot(item_data) -> void:
+	#1. Proucura o item na hotbar
+	var old_index = hotbar_items.find(item_data)
+	
+	#2. Vai ver se o item já existe:
+	if old_index != null:
+		# Se existir e for no mesmo slot
+		if old_index == current_slot_index:
+			return # Faz nada
+		#Se ele estiver em outro slot, 1° limpa o slot antigo
+		hotbar_items[old_index] = null
+	
+	#3. Coloca o item no novo slot (consequentemete subrescrevendo se tiver algo lá)
+	hotbar_items[current_slot_index] = item_data
+	
+	#4. chama a UI de atualização:
+	hotbar_updated.emit()
 
 func change_slot_selection(direction: int):
 	current_slot_index = (current_slot_index + direction) % hotbar_items.size()

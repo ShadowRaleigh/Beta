@@ -8,4 +8,5 @@ script = ExtResource("1_1gkl8")
 name = "Lata Aberta"
 model = ExtResource("1_y48o8")
 description = "Uma lata que foi aberta"
+item_scene_path = "uid://jhh6gg5gy0f6"
 metadata/_custom_type_script = "uid://d2vhr18entnol"

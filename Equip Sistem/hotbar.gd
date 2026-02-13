@@ -7,7 +7,7 @@ extends Control
 @export var selection_border_texture: Texture2D # Textura para indicar seleção (borda)
 
 func _ready():
-	GameManager.inventory_updated.connect(update_ui)
+	GameManager.hotbar_updated.connect(update_ui)
 	GameManager.slot_selected.connect(highlight_slot)
 	
 	# Inicialização
@@ -25,11 +25,11 @@ func update_ui():
 	for i in range(slots.size()):
 		if i >= GameManager.hotbar_items.size(): break    
 		var item = GameManager.hotbar_items[i]
-		var slot_ui = slots[i] # Supondo que slots[i] seja um TextureRect ou Button  
+		var slot_ui = slots[i] # Sendo item atualiza a textura
 		if item:
 			slot_ui.texture = item.icon 
 		else:
-			slot_ui.texture = empty_slot_texture
+			slot_ui.texture = empty_slot_texture #Não sendo fica aquele quadrado branco
 
 func highlight_slot(index):
 	# Lógica para destacar o slot selecionado

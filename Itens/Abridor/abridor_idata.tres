@@ -10,4 +10,5 @@ name = "Abridor"
 model = ExtResource("1_lrj5u")
 description = "Definitivamente não abre uma porta mesmo tendo o nome abridor"
 icon = ExtResource("1_r3yw1")
+item_scene_path = "uid://b4pyykmcjwrrm"
 metadata/_custom_type_script = "uid://d2vhr18entnol"

@@ -10,4 +10,5 @@ name = "Chave"
 model = ExtResource("1_7tj76")
 description = "Uma chave"
 icon = ExtResource("1_jftgc")
+item_scene_path = "uid://daamjyh4461n7"
 metadata/_custom_type_script = "uid://d2vhr18entnol"

@@ -25,13 +25,22 @@ offset_right = 660.0
 offset_bottom = 595.0
 
 [node name="Slot1" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=520772818]
+texture_filter = 4
 custom_minimum_size = Vector2(69, 69)
 layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot2" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=1656195260]
+texture_filter = 4
 custom_minimum_size = Vector2(69, 69)
 layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot3" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=1704792769]
+texture_filter = 4
 custom_minimum_size = Vector2(69, 69)
 layout_mode = 2
+expand_mode = 1
+stretch_mode = 5

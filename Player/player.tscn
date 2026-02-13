@@ -22,3 +22,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5629763, 0)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2032552983]
 stream = ExtResource("3_btcbx")
 volume_db = 3.133
+
+[node name="HandContainer" type="Marker3D" parent="." unique_id=1090331697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.385, 0.29, -0.66)
