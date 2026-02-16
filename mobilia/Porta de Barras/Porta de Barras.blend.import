@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://e1srneukpjb8"
-path="res://.godot/imported/Porta-de-madeira-rustica.blend-406ef447ba90b84fcc123be82b6307af.scn"
+uid="uid://u3bpa1buf6it"
+path="res://.godot/imported/Porta de Barras.blend-ab279e72c5d4cdd0f796360ca30750fc.scn"
 
 [deps]
 
-source_file="res://Itens/Porta/Porta-de-madeira-rustica.blend"
-dest_files=["res://.godot/imported/Porta-de-madeira-rustica.blend-406ef447ba90b84fcc123be82b6307af.scn"]
+source_file="res://mobilia/Porta de Barras/Porta de Barras.blend"
+dest_files=["res://.godot/imported/Porta de Barras.blend-ab279e72c5d4cdd0f796360ca30750fc.scn"]
 
 [params]
 
@@ -37,11 +37,19 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://mobilia/Porta de Barras/Material_Porta_de_Barras.tres",
+"use_external/path": "uid://dt1isurnfq4at"
+}
+}
+}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=true
-blender/nodes/cameras=true
+blender/nodes/punctual_lights=false
+blender/nodes/cameras=false
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false
