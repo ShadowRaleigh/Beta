@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bexul20hjnkrs"]
 
 [ext_resource type="Script" uid="uid://yx03jt4epthl" path="res://Player/player.gd" id="1_l8h54"]
-[ext_resource type="Script" uid="uid://dmkpned7v3cwm" path="res://Generic Components/input_component.gd" id="2_4ntmi"]
-[ext_resource type="Script" uid="uid://ls8ityo4tnif" path="res://Generic Components/movement_component.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://dmkpned7v3cwm" path="res://Components/input_component.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://ls8ityo4tnif" path="res://Components/movement_component.gd" id="3_btcbx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_btcbx"]
 

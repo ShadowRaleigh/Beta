@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c3f675l8n3rcg"]
+
+[ext_resource type="Texture2D" uid="uid://bl2bquv5o6mh2" path="res://Items/Lata_Lacrada/Lata_lacrada.png" id="1_4vncm"]
+[ext_resource type="Script" uid="uid://b1j3u60r47ibo" path="res://Items/item_data.gd" id="1_xswld"]
+[ext_resource type="PackedScene" uid="uid://rgujn6c5aj3" path="res://Items/Lata_Aberta/Lata_Aberta.blend" id="2_4vncm"]
+
+[resource]
+script = ExtResource("1_xswld")
+name = "TestName"
+description = "TestDescription"
+icon = ExtResource("1_4vncm")
+model = ExtResource("2_4vncm")
+can_rotate = true
+mass = 0.3
+metadata/_custom_type_script = "uid://b1j3u60r47ibo"

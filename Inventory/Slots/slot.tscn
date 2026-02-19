@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://mk4k5vsav3hd"]
+
+[ext_resource type="Script" uid="uid://dffn2h042w2nn" path="res://Inventory/Slots/slot.gd" id="1_rlca5"]
+[ext_resource type="Script" uid="uid://c7ijxlcxil8qq" path="res://Generic Components/rotation_component.gd" id="2_ajqi8"]
+[ext_resource type="Resource" uid="uid://i056sncuq577" path="res://Inventory/Slots/test_slot_data.tres" id="2_to16r"]
+[ext_resource type="Script" uid="uid://r1q30t7ei6kv" path="res://Generic Components/visual_component_3d.gd" id="3_5afkt"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5afkt"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_to16r"]
+sky_material = SubResource("ProceduralSkyMaterial_5afkt")
+
+[sub_resource type="Environment" id="Environment_px46p"]
+background_mode = 2
+sky = SubResource("Sky_to16r")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Slot" type="Node3D" unique_id=1160196586]
+script = ExtResource("1_rlca5")
+slot_data = ExtResource("2_to16r")
+
+[node name="VisualComponent3D" type="Node3D" parent="." unique_id=696901863]
+script = ExtResource("3_5afkt")
+metadata/_custom_type_script = "uid://r1q30t7ei6kv"
+
+[node name="RotationComponent" type="Node" parent="." unique_id=1942764302]
+script = ExtResource("2_ajqi8")
+metadata/_custom_type_script = "uid://c7ijxlcxil8qq"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1660351700]
+environment = SubResource("Environment_px46p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1221680879]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1850591969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5608387)

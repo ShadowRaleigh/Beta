@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://diewyw72v4y7i"]
+
+[ext_resource type="Script" uid="uid://v8uqltbmh1w0" path="res://Outdated/Player/player.gd" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://dmtf8kq5hokcl" path="res://Outdated/Player/Item Collector/collector.tscn" id="2_4ntmi"]
+[ext_resource type="AudioStream" uid="uid://cvbn7ymm53jb7" path="res://Sound Efect/Som de passo.wav" id="3_btcbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ntmi"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1898680812]
+script = ExtResource("1_l8h54")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=341744390]
+shape = SubResource("CapsuleShape3D_4ntmi")
+
+[node name="Head" type="Node3D" parent="." unique_id=2050923751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5629763, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1280589164 groups=["MainCamera"]]
+
+[node name="Collector" parent="Head" unique_id=1467162257 instance=ExtResource("2_4ntmi")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2032552983]
+stream = ExtResource("3_btcbx")
+volume_db = 3.133
+
+[node name="HandContainer" type="Marker3D" parent="." unique_id=1090331697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.385, 0.29, -0.66)

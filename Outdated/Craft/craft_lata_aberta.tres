@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Craft" format=3 uid="uid://5lb5j22u6tld"]
+
+[ext_resource type="Script" uid="uid://d2vhr18entnol" path="res://Itens/item_data.gd" id="1_y0b1y"]
+[ext_resource type="Resource" uid="uid://bvgw8fugcvh71" path="res://Itens/Lata_Lacrada/lata_lacrada_idata.tres" id="2_gi6s0"]
+[ext_resource type="Script" uid="uid://clankae2lg5t1" path="res://Outdated/Craft/craft_script.gd" id="2_si4gj"]
+[ext_resource type="Resource" uid="uid://cnlvmt1icmyrp" path="res://Itens/Abridor/abridor_idata.tres" id="3_c7w5u"]
+[ext_resource type="Resource" uid="uid://dsvpqui836i14" path="res://Itens/Lata_Aberta/lata_aberta_idata.tres" id="4_vrkd7"]
+
+[resource]
+script = ExtResource("2_si4gj")
+recipe_name = "Lata Aberta"
+ingredients = Array[ExtResource("1_y0b1y")]([ExtResource("2_gi6s0"), ExtResource("3_c7w5u")])
+result = Array[ExtResource("1_y0b1y")]([ExtResource("4_vrkd7")])
+metadata/_custom_type_script = "uid://clankae2lg5t1"

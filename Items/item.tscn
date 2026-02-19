@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cu06rxuvmtwds"]
+
+[ext_resource type="Script" uid="uid://ck82rcncf5cgl" path="res://Items/item.gd" id="1_bkywi"]
+[ext_resource type="Script" uid="uid://r1q30t7ei6kv" path="res://Generic Components/visual_component_3d.gd" id="2_p2kau"]
+
+[node name="Item" type="RigidBody3D" unique_id=533263218]
+script = ExtResource("1_bkywi")
+
+[node name="VisualComponent3D" type="Node3D" parent="." unique_id=1429482265]
+script = ExtResource("2_p2kau")
+metadata/_custom_type_script = "uid://r1q30t7ei6kv"

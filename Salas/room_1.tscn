@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bk5l0vyhe7c78"]
 
-[ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Player/player.tscn" id="1_wy3dk"]
-[ext_resource type="PackedScene" uid="uid://dhb6yiacidb53" path="res://Itens/Pistola/pistol.tscn" id="2_x3fbe"]
+[ext_resource type="PackedScene" uid="uid://bexul20hjnkrs" path="res://Player/player.tscn" id="1_hqwtv"]
+[ext_resource type="Script" uid="uid://co0f3utuecp0b" path="res://Salas/room_1.gd" id="1_x3fbe"]
+[ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="3_yvytj"]
+[ext_resource type="Script" uid="uid://dmkpned7v3cwm" path="res://Generic Components/input_component.gd" id="4_dvehe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqwtv"]
 albedo_color = Color(0, 0, 0.7294118, 1)
 
 [node name="Sala1" type="Node3D" unique_id=1059648526]
+script = ExtResource("1_x3fbe")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2002786097]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -16,9 +19,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.246549, -9.764977)
 use_collision = true
 size = Vector3(20, 8, 0.5)
-
-[node name="Player" parent="." unique_id=1898680812 instance=ExtResource("1_wy3dk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1145933, 0)
 
 [node name="Wall 2" type="CSGBox3D" parent="." unique_id=1943085199]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2412033, 9.728228)
@@ -54,11 +54,15 @@ material = SubResource("StandardMaterial3D_hqwtv")
 use_collision = true
 size = Vector3(20, 0.5, 20)
 
-[node name="Pistola" parent="." unique_id=1532391 instance=ExtResource("2_x3fbe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01165244, 3.015455, -8.850281)
+[node name="Player" parent="." unique_id=488970819 instance=ExtResource("1_hqwtv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32645416, 2.23005, 0.025582314)
 
-[node name="CollisionPolygon3D" parent="Pistola/Area3D" parent_id_path=PackedInt32Array(1532391, 1544052395) index="0" unique_id=300436067]
-transform = Transform3D(0.495, 0, 0, 0, 0.495, 0, 0, 0, 0.495, 0, 0.03176284, 0.16284841)
+[node name="CameraComponent" type="Node" parent="." unique_id=2093582763 node_paths=PackedStringArray("camera_holder")]
+script = ExtResource("3_yvytj")
+camera_holder = NodePath("../Player")
+metadata/_custom_type_script = "uid://dij1wi7j32xhg"
 
-[editable path="Player"]
-[editable path="Pistola"]
+[node name="InputComponent" type="Node" parent="." unique_id=635742702]
+script = ExtResource("4_dvehe")
+mouse_sensitivity = 0.05
+metadata/_custom_type_script = "uid://dmkpned7v3cwm"

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bu6gfyk5pjhi5"]
+
+[ext_resource type="Script" uid="uid://ump3fv3qmwmc" path="res://Inventory/inventory.gd" id="1_xqyry"]
+[ext_resource type="Script" uid="uid://dmkpned7v3cwm" path="res://Generic Components/input_component.gd" id="2_2aw4r"]
+[ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="2_88mhb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqyry"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_88mhb"]
+sky_material = SubResource("ProceduralSkyMaterial_xqyry")
+
+[sub_resource type="Environment" id="Environment_2aw4r"]
+background_mode = 2
+sky = SubResource("Sky_88mhb")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Inventory" type="Node3D" unique_id=1324267762]
+script = ExtResource("1_xqyry")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1988167178]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1951111278]
+environment = SubResource("Environment_2aw4r")
+
+[node name="InputComponent" type="Node" parent="." unique_id=1266113182]
+script = ExtResource("2_2aw4r")
+metadata/_custom_type_script = "uid://dmkpned7v3cwm"
+
+[node name="CameraComponent" type="Node" parent="." unique_id=563628615 node_paths=PackedStringArray("camera")]
+script = ExtResource("2_88mhb")
+camera = NodePath("Camera3D")
+metadata/_custom_type_script = "uid://dij1wi7j32xhg"
+
+[node name="Camera3D" type="Camera3D" parent="CameraComponent" unique_id=1992677671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.0024793)
+fov = 20.0

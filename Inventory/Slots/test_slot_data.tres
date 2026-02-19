@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SlotData" format=3 uid="uid://i056sncuq577"]
+
+[ext_resource type="Script" uid="uid://bgsqc6n1wxbqg" path="res://Inventory/Slots/slot_data.gd" id="1_ay0pk"]
+[ext_resource type="Texture2D" uid="uid://bl2bquv5o6mh2" path="res://Items/Lata_Lacrada/Lata_lacrada.png" id="1_xp11f"]
+[ext_resource type="PackedScene" uid="uid://cvmhbbfwyjs56" path="res://Items/Lata_Lacrada/Lata_Lacrada.blend" id="2_bghft"]
+[ext_resource type="Script" uid="uid://b1j3u60r47ibo" path="res://Items/item_data.gd" id="3_8126t"]
+
+[sub_resource type="Resource" id="Resource_isq3s"]
+script = ExtResource("3_8126t")
+name = "TestName"
+description = "TestDescription"
+icon = ExtResource("1_xp11f")
+model = ExtResource("2_bghft")
+can_rotate = true
+mass = 0.3
+metadata/_custom_type_script = "uid://b1j3u60r47ibo"
+
+[resource]
+script = ExtResource("1_ay0pk")
+item_data = SubResource("Resource_isq3s")
+ammount = 1
+metadata/_custom_type_script = "uid://bgsqc6n1wxbqg"

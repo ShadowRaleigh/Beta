@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://bwpotscgbhxbw"]
+
+[ext_resource type="Script" uid="uid://dhrreg5e50nba" path="res://Inventory/inventory_data.gd" id="1_vtr8b"]
+[ext_resource type="Script" uid="uid://bgsqc6n1wxbqg" path="res://Inventory/Slots/slot_data.gd" id="2_26q5n"]
+[ext_resource type="Resource" uid="uid://bswgvk4bm28j6" path="res://Inventory/Slots/test_slot_data2.tres" id="3_ippgm"]
+[ext_resource type="Resource" uid="uid://i056sncuq577" path="res://Inventory/Slots/test_slot_data.tres" id="3_vvpno"]
+
+[resource]
+script = ExtResource("1_vtr8b")
+slot_array = Array[ExtResource("2_26q5n")]([ExtResource("3_ippgm"), ExtResource("3_vvpno")])
+metadata/_custom_type_script = "uid://dhrreg5e50nba"

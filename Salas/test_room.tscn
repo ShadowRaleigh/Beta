@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chk2pu38pwagw"]
 
-[ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Player/player.tscn" id="1_wys64"]
+[ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Outdated/Player/player.tscn" id="1_wys64"]
 
 [node name="SalaTeste" type="Node3D" unique_id=1109590375]
 
