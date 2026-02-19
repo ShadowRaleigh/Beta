@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bu6gfyk5pjhi5"]
 
 [ext_resource type="Script" uid="uid://ump3fv3qmwmc" path="res://Inventory/inventory.gd" id="1_xqyry"]
-[ext_resource type="Script" uid="uid://dmkpned7v3cwm" path="res://Generic Components/input_component.gd" id="2_2aw4r"]
 [ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="2_88mhb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqyry"]
@@ -27,13 +26,8 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1951111278]
 environment = SubResource("Environment_2aw4r")
 
-[node name="InputComponent" type="Node" parent="." unique_id=1266113182]
-script = ExtResource("2_2aw4r")
-metadata/_custom_type_script = "uid://dmkpned7v3cwm"
-
-[node name="CameraComponent" type="Node" parent="." unique_id=563628615 node_paths=PackedStringArray("camera")]
+[node name="CameraComponent" type="Node" parent="." unique_id=563628615]
 script = ExtResource("2_88mhb")
-camera = NodePath("Camera3D")
 metadata/_custom_type_script = "uid://dij1wi7j32xhg"
 
 [node name="Camera3D" type="Camera3D" parent="CameraComponent" unique_id=1992677671]

@@ -1,35 +1,48 @@
 class_name CameraComponent extends Node
 
-@export_range(0, 1) var lerp_weight:float = 0.75 
 @export var camera: Camera3D
-@export var camera_handler: Marker3D
-@export var camera_holder: Node3D
-@export var max_degree_rotation: float = 90
+@export var camera_holder: Marker3D
+@export var camera_owner: Node3D
+@export var max_degree_rotation: float = 90 ##Relativo apenas à rotação horizontal
 
-var time_since_last_frame: float
+var rot_x: float = 0
 
-func _ready() -> void:
-	if camera and find_child(camera.name):
+func rotate_camera_with_mouse(mouse_movement: Vector2, mouse_sensitivity: float): 
+	
+	rot_x += deg_to_rad(-mouse_movement.y * mouse_sensitivity)
+	rot_x = clampf(rot_x, deg_to_rad(-max_degree_rotation), deg_to_rad(max_degree_rotation))
+	
+	camera.rotation.x = rot_x
+	camera_owner.rotate_y(deg_to_rad(-mouse_movement.x * mouse_sensitivity))
+	
+func spawn_camera():
+	if camera and camera_holder and camera_holder.find_child(camera.name):
 		pass
-	elif camera and not find_child(camera.name):
-		push_error("A câmera designada não é filha do CameraComponent!")
-		camera.call_deferred("reparent", self)
-		
-	else:
+	elif camera and camera_holder and not camera_holder.find_child(camera.name):
+		push_error("A câmera designada não é filha do %s!" % camera_holder.name)
+		camera.call_deferred("reparent", camera_holder)
+	elif camera_holder and not camera:
+		camera = Camera3D.new()
+		camera_holder.add_child(camera)
+	elif not camera_holder and camera:
+		push_warning("Holder não encontrado, setando a câmera como filha do componente")
+		camera_holder.add_child(camera)
+	else: 
+		push_warning("Holder não encontrado, setando a câmera como filha do componente")
 		camera = Camera3D.new()
 		add_child(camera)
-
-func smooth_camera_movement() -> void:
-	if camera and camera_handler:
-		camera.global_position.lerp(camera_handler.global_position, lerp_weight)
-
-func rotate_camera_with_mouse(mouse_movent: Vector2, mouse_sensitivity: float): 
-	var tweener = create_tween()
 	
-	tweener.tween_property(camera, "global_rotation:y", camera.global_rotation.y + deg_to_rad(-mouse_movent.x * mouse_sensitivity), time_since_last_frame)
-	tweener.parallel().tween_property(camera, "rotation:x", clampf(camera.rotation.x + deg_to_rad(-mouse_movent.y * mouse_sensitivity), deg_to_rad(-max_degree_rotation), deg_to_rad(max_degree_rotation)), time_since_last_frame)
-	tweener.parallel().tween_property(camera_holder, "global_rotation:y", camera.global_rotation.y, time_since_last_frame)
+	camera.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_ON
+	
+	if camera_owner:
+		pass
+	elif camera_holder:
+		camera_owner = camera_holder
+		push_warning("Owner não encontrado, setando holder como owner")
+	else:
+		camera_owner = camera
+		push_warning("Nem owner ou holder encontrado, setando câmera como owner")
 
-func _process(delta: float) -> void:
-	time_since_last_frame = delta
-	smooth_camera_movement()
+func setup_camera():
+	spawn_camera()
+	rot_x = camera.rotation.x

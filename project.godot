@@ -15,6 +15,10 @@ run/main_scene="uid://bk5l0vyhe7c78"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+InputManager="*uid://dmkpned7v3cwm"
+
 [display]
 
 window/size/mode=2
@@ -141,6 +145,7 @@ previous_inv_item={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

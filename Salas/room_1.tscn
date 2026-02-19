@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bexul20hjnkrs" path="res://Player/player.tscn" id="1_hqwtv"]
 [ext_resource type="Script" uid="uid://co0f3utuecp0b" path="res://Salas/room_1.gd" id="1_x3fbe"]
-[ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="3_yvytj"]
-[ext_resource type="Script" uid="uid://dmkpned7v3cwm" path="res://Generic Components/input_component.gd" id="4_dvehe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqwtv"]
 albedo_color = Color(0, 0, 0.7294118, 1)
@@ -56,13 +54,3 @@ size = Vector3(20, 0.5, 20)
 
 [node name="Player" parent="." unique_id=488970819 instance=ExtResource("1_hqwtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32645416, 2.23005, 0.025582314)
-
-[node name="CameraComponent" type="Node" parent="." unique_id=2093582763 node_paths=PackedStringArray("camera_holder")]
-script = ExtResource("3_yvytj")
-camera_holder = NodePath("../Player")
-metadata/_custom_type_script = "uid://dij1wi7j32xhg"
-
-[node name="InputComponent" type="Node" parent="." unique_id=635742702]
-script = ExtResource("4_dvehe")
-mouse_sensitivity = 0.05
-metadata/_custom_type_script = "uid://dmkpned7v3cwm"

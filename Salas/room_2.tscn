@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://hepngnm7a1xb"]
 
-[ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Outdated/Player/player.tscn" id="1_ugbt4"]
-
 [node name="Sala2" type="Node3D" unique_id=1059648526]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2002786097]
@@ -51,9 +49,6 @@ size = Vector3(9, 8, 0.5)
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -9.746226, 5.747136, -0.012321055)
 use_collision = true
 size = Vector3(2.1, 5, 0.5)
-
-[node name="Player" parent="." unique_id=1898680812 instance=ExtResource("1_ugbt4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5208526, 0)
 
 [node name="Weight" type="CSGCylinder3D" parent="." unique_id=1773577390]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.169031, 5.866804, -3.0113142)
