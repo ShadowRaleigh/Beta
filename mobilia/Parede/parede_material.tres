@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mluhyuwyeflw"]
+
+[ext_resource type="Texture2D" uid="uid://bdevlxrvny6xo" path="res://mobilia/Parede/WoodSiding007_1K-PNG_Color.png" id="1_82exe"]
+[ext_resource type="Texture2D" uid="uid://b0x8j2ikhtbyj" path="res://mobilia/Parede/WoodSiding007_1K-PNG_NormalDX.png" id="2_latqu"]
+[ext_resource type="Texture2D" uid="uid://ocfjh10cobjp" path="res://mobilia/Parede/WoodSiding007_1K-PNG_Roughness.png" id="3_ygw5x"]
+
+[resource]
+albedo_texture = ExtResource("1_82exe")
+roughness_texture = ExtResource("3_ygw5x")
+normal_enabled = true
+normal_texture = ExtResource("2_latqu")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true

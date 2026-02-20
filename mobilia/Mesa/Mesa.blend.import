@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bf8a1xjs605ia"
-path="res://.godot/imported/Porta-de-madeira-rustica.blend-8ee972a0719b6bcd75bcce8b891da408.scn"
+uid="uid://j477fai4efw"
+path="res://.godot/imported/Mesa.blend-20a549fe29391b9ee5521b43f5622c2b.scn"
 
 [deps]
 
-source_file="res://mobilia/Porta/Porta-de-madeira-rustica.blend"
-dest_files=["res://.godot/imported/Porta-de-madeira-rustica.blend-8ee972a0719b6bcd75bcce8b891da408.scn"]
+source_file="res://mobilia/Mesa/Mesa.blend"
+dest_files=["res://.godot/imported/Mesa.blend-20a549fe29391b9ee5521b43f5622c2b.scn"]
 
 [params]
 

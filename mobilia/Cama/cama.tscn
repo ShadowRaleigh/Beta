@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://brbcxsmeb0oa0"]
+
+[ext_resource type="PackedScene" uid="uid://dj2cjm3c81oid" path="res://mobilia/Cama/Bed.fbx" id="1_b1ynl"]
+
+[node name="Cama" type="Node3D" unique_id=1688777696]
+
+[node name="Bed" parent="." unique_id=58827351 instance=ExtResource("1_b1ynl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10674572, 0, 0.02282834)

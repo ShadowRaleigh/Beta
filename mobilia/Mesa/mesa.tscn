@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bsc2up27afe2j"]
+
+[ext_resource type="PackedScene" uid="uid://j477fai4efw" path="res://mobilia/Mesa/Mesa.blend" id="1_02arh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02arh"]
+size = Vector3(2.0078125, 0.23138428, 3.2019043)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fmuut"]
+size = Vector3(0.20539093, 1, 0.20462036)
+
+[node name="Mesa" type="Node3D" unique_id=706254884]
+
+[node name="Mesa" parent="." unique_id=593825937 instance=ExtResource("1_02arh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=209202667]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1720185093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001953125, 1.0864433, -0.00028157234)
+shape = SubResource("BoxShape3D_02arh")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1443275046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89989257, 0.47305673, 1.4982824)
+shape = SubResource("BoxShape3D_fmuut")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=191876931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89963865, 0.47305673, 1.4982824)
+shape = SubResource("BoxShape3D_fmuut")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=2078352488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89963865, 0.47305673, -1.5015926)
+shape = SubResource("BoxShape3D_fmuut")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1509815797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89788413, 0.47305673, -1.5015926)
+shape = SubResource("BoxShape3D_fmuut")
