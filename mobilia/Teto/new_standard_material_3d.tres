@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://du1lgwxn1o372"]
+
+[ext_resource type="Texture2D" uid="uid://d5f5iw00o0rh" path="res://mobilia/Teto/OfficeCeiling001_1K-PNG_Color.png" id="1_4xnq0"]
+[ext_resource type="Texture2D" uid="uid://705uhu2wbi3p" path="res://mobilia/Teto/OfficeCeiling001_1K-PNG_NormalDX.png" id="2_fvkv6"]
+[ext_resource type="Texture2D" uid="uid://by20b7xr54kx0" path="res://mobilia/Teto/OfficeCeiling001_1K-PNG_Roughness.png" id="3_jkqm2"]
+
+[resource]
+albedo_texture = ExtResource("1_4xnq0")
+roughness_texture = ExtResource("3_jkqm2")
+normal_enabled = true
+normal_texture = ExtResource("2_fvkv6")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true

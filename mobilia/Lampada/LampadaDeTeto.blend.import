@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bf8a1xjs605ia"
-path="res://.godot/imported/Porta-de-madeira-rustica.blend-8ee972a0719b6bcd75bcce8b891da408.scn"
+uid="uid://dqjhgbgr1c51r"
+path="res://.godot/imported/LampadaDeTeto.blend-cd7ac1feca475607ea71957dbe7bcfd5.scn"
 
 [deps]
 
-source_file="res://mobilia/Porta/Porta-de-madeira-rustica.blend"
-dest_files=["res://.godot/imported/Porta-de-madeira-rustica.blend-8ee972a0719b6bcd75bcce8b891da408.scn"]
+source_file="res://mobilia/Lampada/LampadaDeTeto.blend"
+dest_files=["res://.godot/imported/LampadaDeTeto.blend-cd7ac1feca475607ea71957dbe7bcfd5.scn"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cmke7ka1nwoel"]
+
+[ext_resource type="Texture2D" uid="uid://tck1vk1u0n6h" path="res://mobilia/stone/Albedo.png" id="1_dmu8a"]
+[ext_resource type="Texture2D" uid="uid://53mj6tl8bq5n" path="res://mobilia/stone/Normal.png" id="2_7jy5d"]
+[ext_resource type="Texture2D" uid="uid://d3nqgjpfamdy6" path="res://mobilia/stone/Roughness.png" id="3_xwqwo"]
+
+[resource]
+albedo_texture = ExtResource("1_dmu8a")
+roughness_texture = ExtResource("3_xwqwo")
+normal_enabled = true
+normal_texture = ExtResource("2_7jy5d")
+uv1_scale = Vector3(4, 4, 4)
+uv1_triplanar = true

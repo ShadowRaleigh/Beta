@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtvkadt0g54mr"]
+
+[ext_resource type="Texture2D" uid="uid://c5oojcdxbiua2" path="res://mobilia/Porta/Madeira_Color.png" id="1_2vpij"]
+
+[resource]
+albedo_texture = ExtResource("1_2vpij")
+uv1_scale = Vector3(4.01, 4.01, 4.01)
