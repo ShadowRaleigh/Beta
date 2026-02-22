@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cc5wpsumfof3x"
-path="res://.godot/imported/Lixeira.blend-3759ea95fca8331a44e369332613fcad.scn"
+path="res://.godot/imported/Lixeira.blend-4e5bdf821aa898871e6f62a7e441af81.scn"
 
 [deps]
 
-source_file="res://mobilia/Lixeira.blend"
-dest_files=["res://.godot/imported/Lixeira.blend-3759ea95fca8331a44e369332613fcad.scn"]
+source_file="res://Mobilia/Lixeira.blend"
+dest_files=["res://.godot/imported/Lixeira.blend-4e5bdf821aa898871e6f62a7e441af81.scn"]
 
 [params]
 

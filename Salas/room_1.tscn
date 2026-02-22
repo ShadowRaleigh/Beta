@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://Mobilia/stone/pedra.tres" id="6_5w4g1"]
 [ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://Mobilia/Teto/new_standard_material_3d.tres" id="7_3vcrp"]
 [ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://Mobilia/Lampada/LampadaDeTeto.blend" id="8_pt3ae"]
-[ext_resource type="PackedScene" uid="uid://br44a0qbkfghg" path="res://Mobilia/Porta/Porta-de-madeira-rustica (1).fbx" id="9_4nmrn"]
+[ext_resource type="PackedScene" uid="uid://bn6pklxwjbj55" path="res://Mobilia/Porta/Porta-de-madeira-rustica (1).glb" id="9_4nmrn"]
 [ext_resource type="PackedScene" uid="uid://byyxlshpugagx" path="res://Items/Lata_Lacrada/sealed_can.tscn" id="10_4nmrn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dvehe"]

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bn6pklxwjbj55"
-path="res://.godot/imported/Porta-de-madeira-rustica (1).glb-f16fdb62fb10f0352361f110f34e9185.scn"
+path="res://.godot/imported/Porta-de-madeira-rustica (1).glb-c43699a5d628b5a4761482fda41441d3.scn"
 
 [deps]
 
-source_file="res://mobilia/Porta/Porta-de-madeira-rustica (1).glb"
-dest_files=["res://.godot/imported/Porta-de-madeira-rustica (1).glb-f16fdb62fb10f0352361f110f34e9185.scn"]
+source_file="res://Mobilia/Porta/Porta-de-madeira-rustica (1).glb"
+dest_files=["res://.godot/imported/Porta-de-madeira-rustica (1).glb-c43699a5d628b5a4761482fda41441d3.scn"]
 
 [params]
 
@@ -41,17 +41,17 @@ _subresources={
 "materials": {
 "Madeira.001": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://mobilia/Porta/madeira_porta.tres",
+"use_external/fallback_path": "res://Mobilia/Porta/madeira_porta.tres",
 "use_external/path": "uid://dtvkadt0g54mr"
 },
 "Ouro Fosco": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://mobilia/Porta/ourofosco_porta.tres",
+"use_external/fallback_path": "res://Mobilia/Porta/ourofosco_porta.tres",
 "use_external/path": "uid://b0l3u3q4pulr2"
 },
 "Vidro": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://mobilia/Porta/vidro_porta.tres",
+"use_external/fallback_path": "res://Mobilia/Porta/vidro_porta.tres",
 "use_external/path": "uid://c0jhircys35r0"
 }
 }
