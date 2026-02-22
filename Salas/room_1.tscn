@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://mobilia/stone/pedra.tres" id="6_5w4g1"]
 [ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://mobilia/Teto/new_standard_material_3d.tres" id="7_3vcrp"]
 [ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://mobilia/Lampada/LampadaDeTeto.blend" id="8_pt3ae"]
-[ext_resource type="PackedScene" uid="uid://br44a0qbkfghg" path="res://mobilia/Porta/Porta-de-madeira-rustica (1).fbx" id="9_4nmrn"]
+[ext_resource type="PackedScene" uid="uid://dggm1mbm0bkcm" path="res://mobilia/Porta/Cena_porta_de_madeira_rustica.tscn" id="9_pt3ae"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dvehe"]
 
@@ -119,5 +119,5 @@ shape = SubResource("BoxShape3D_dvehe")
 [node name="LampadaDeTeto" parent="." unique_id=239778657 instance=ExtResource("8_pt3ae")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 5.456, 0)
 
-[node name="Porta-de-madeira-rustica (1)" parent="." unique_id=1939222447 instance=ExtResource("9_4nmrn")]
-transform = Transform3D(-1.162723e-07, -2.66, 0, 2.66, -1.162723e-07, 0, 0, 0, 3.085, 10.017, 2.9660857, 0)
+[node name="Porta-de-madeira-rustica" parent="." unique_id=173366247 instance=ExtResource("9_pt3ae")]
+transform = Transform3D(2.76, 0, 0, 0, 2.76, 0, 0, 0, 3.1, 9.984265, 2.8283308, 0)

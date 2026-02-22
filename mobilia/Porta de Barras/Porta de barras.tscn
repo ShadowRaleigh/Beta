@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://tmxcqyr8ecmu"]
+
+[ext_resource type="PackedScene" uid="uid://djmq3dd7upgdh" path="res://mobilia/Porta de Barras/Porta de Barras.blend" id="1_i7jvs"]
+[ext_resource type="Material" uid="uid://cwwaenjkgoj0i" path="res://mobilia/Porta de Barras/Porta_de_Barras.tres" id="2_7o7s8"]
+
+[node name="image editor" unique_id=1865248931 instance=ExtResource("1_i7jvs")]
+
+[node name="Cube_001" parent="." index="0" unique_id=417322757]
+transform = Transform3D(0.050184906, 0, 0, 0, 0.050000012, 0, 0, 0, 0.90000004, 0, 8.65812, 0)
+material_override = ExtResource("2_7o7s8")

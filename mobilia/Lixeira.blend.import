@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djmq3dd7upgdh"
-path="res://.godot/imported/Porta de Barras.blend-ab279e72c5d4cdd0f796360ca30750fc.scn"
+uid="uid://cc5wpsumfof3x"
+path="res://.godot/imported/Lixeira.blend-3759ea95fca8331a44e369332613fcad.scn"
 
 [deps]
 
-source_file="res://mobilia/Porta de Barras/Porta de Barras.blend"
-dest_files=["res://.godot/imported/Porta de Barras.blend-ab279e72c5d4cdd0f796360ca30750fc.scn"]
+source_file="res://mobilia/Lixeira.blend"
+dest_files=["res://.godot/imported/Lixeira.blend-3759ea95fca8331a44e369332613fcad.scn"]
 
 [params]
 

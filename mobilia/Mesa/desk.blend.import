@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djmq3dd7upgdh"
-path="res://.godot/imported/Porta de Barras.blend-ab279e72c5d4cdd0f796360ca30750fc.scn"
+uid="uid://cxnmgq2u21aqc"
+path="res://.godot/imported/desk.blend-e42a4e4756bf87519ac3149a5c4171cc.scn"
 
 [deps]
 
-source_file="res://mobilia/Porta de Barras/Porta de Barras.blend"
-dest_files=["res://.godot/imported/Porta de Barras.blend-ab279e72c5d4cdd0f796360ca30750fc.scn"]
+source_file="res://mobilia/Mesa/desk.blend"
+dest_files=["res://.godot/imported/desk.blend-e42a4e4756bf87519ac3149a5c4171cc.scn"]
 
 [params]
 
@@ -40,8 +40,8 @@ materials/extract_path=""
 _subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=false
-blender/nodes/cameras=false
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false

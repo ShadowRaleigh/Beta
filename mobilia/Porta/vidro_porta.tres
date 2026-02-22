@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0jhircys35r0"]
+
+[ext_resource type="Texture2D" uid="uid://cv6pqdkv751aq" path="res://mobilia/Porta/Vidro_color.png" id="1_fj3mi"]
+
+[resource]
+albedo_texture = ExtResource("1_fj3mi")

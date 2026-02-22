@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br44a0qbkfghg"
-path="res://.godot/imported/Porta-de-madeira-rustica (1).fbx-27569bf6244c94f22d6b1582396955c3.scn"
+uid="uid://bn6pklxwjbj55"
+path="res://.godot/imported/Porta-de-madeira-rustica (1).glb-f16fdb62fb10f0352361f110f34e9185.scn"
 
 [deps]
 
-source_file="res://mobilia/Porta/Porta-de-madeira-rustica (1).fbx"
-dest_files=["res://.godot/imported/Porta-de-madeira-rustica (1).fbx-27569bf6244c94f22d6b1582396955c3.scn"]
+source_file="res://mobilia/Porta/Porta-de-madeira-rustica (1).glb"
+dest_files=["res://.godot/imported/Porta-de-madeira-rustica (1).glb-f16fdb62fb10f0352361f110f34e9185.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -48,18 +48,13 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://mobilia/Porta/ourofosco_porta.tres",
 "use_external/path": "uid://b0l3u3q4pulr2"
-}
 },
-"nodes": {
-"PATH:Camera": {
-"import/skip_import": true
-},
-"PATH:Light": {
-"import/skip_import": true
+"Vidro": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://mobilia/Porta/vidro_porta.tres",
+"use_external/path": "uid://c0jhircys35r0"
 }
 }
 }
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
