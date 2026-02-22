@@ -1,15 +1,27 @@
 [gd_scene format=3 uid="uid://bexul20hjnkrs"]
 
 [ext_resource type="Script" uid="uid://yx03jt4epthl" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://60pqk1jc74go" path="res://Generic Components/inventory_component.gd" id="2_fhl08"]
 [ext_resource type="Script" uid="uid://ls8ityo4tnif" path="res://Generic Components/movement_component.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="3_gwnis"]
+[ext_resource type="Resource" uid="uid://x8futa6swafa" path="res://Player/player_inventory.tres" id="3_vtle1"]
+[ext_resource type="Script" uid="uid://dxq3bkydbd172" path="res://Generic Components/collector_component.gd" id="4_gwnis"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_btcbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ntmi"]
 
 [node name="Player" type="CharacterBody3D" unique_id=488970819]
+physics_interpolation_mode = 1
 script = ExtResource("1_l8h54")
+
+[node name="InventoryComponent" type="Node" parent="." unique_id=1064340649]
+script = ExtResource("2_fhl08")
+inventory_data = ExtResource("3_vtle1")
+metadata/_custom_type_script = "uid://60pqk1jc74go"
+
+[node name="Head" type="Marker3D" parent="." unique_id=982446709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5549909, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=933045311]
 mesh = SubResource("CapsuleMesh_btcbx")
@@ -17,8 +29,14 @@ mesh = SubResource("CapsuleMesh_btcbx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1754034631]
 shape = SubResource("CapsuleShape3D_4ntmi")
 
+[node name="CollectorComponent" type="Node" parent="." unique_id=114107850 node_paths=PackedStringArray("holder")]
+script = ExtResource("4_gwnis")
+holder = NodePath("../Head")
+metadata/_custom_type_script = "uid://dxq3bkydbd172"
+
 [node name="CameraComponent" type="Node" parent="." unique_id=995249186 node_paths=PackedStringArray("camera_holder", "camera_owner")]
 script = ExtResource("3_gwnis")
+current = true
 camera_holder = NodePath("../Head")
 camera_owner = NodePath("..")
 metadata/_custom_type_script = "uid://dij1wi7j32xhg"
@@ -27,6 +45,3 @@ metadata/_custom_type_script = "uid://dij1wi7j32xhg"
 script = ExtResource("3_btcbx")
 body = NodePath("..")
 metadata/_custom_type_script = "uid://ls8ityo4tnif"
-
-[node name="Head" type="Marker3D" parent="." unique_id=982446709]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5549909, 0)

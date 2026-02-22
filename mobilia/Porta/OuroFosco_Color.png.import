@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ox842tejtoq"
-path.s3tc="res://.godot/imported/OuroFosco_Color.png-6dddf44c0a3d30c784449e6e1f08ef7a.s3tc.ctex"
+path.s3tc="res://.godot/imported/OuroFosco_Color.png-7c1c1ed7253463a158264ac3a5b8c971.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mobilia/Porta/OuroFosco_Color.png"
-dest_files=["res://.godot/imported/OuroFosco_Color.png-6dddf44c0a3d30c784449e6e1f08ef7a.s3tc.ctex"]
+source_file="res://Mobilia/Porta/OuroFosco_Color.png"
+dest_files=["res://.godot/imported/OuroFosco_Color.png-7c1c1ed7253463a158264ac3a5b8c971.s3tc.ctex"]
 
 [params]
 

@@ -29,6 +29,13 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 size = Vector3(20.116974, 0.2748413, 20.21286)
 
 [node name="Sala2" type="Node3D" unique_id=1059648526]
+[ext_resource type="Script" uid="uid://co0f3utuecp0b" path="res://Salas/level.gd" id="1_cq0rt"]
+[ext_resource type="PackedScene" uid="uid://bexul20hjnkrs" path="res://Player/player.tscn" id="2_yin0w"]
+[ext_resource type="PackedScene" uid="uid://byyxlshpugagx" path="res://Items/Lata_Lacrada/sealed_can.tscn" id="3_x6ig2"]
+
+[node name="Sala2" type="Node3D" unique_id=1614557123]
+script = ExtResource("1_cq0rt")
+metadata/_custom_type_script = "uid://co0f3utuecp0b"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2002786097]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -36,6 +43,12 @@ shadow_enabled = true
 
 [node name="desk" parent="." unique_id=433005568 instance=ExtResource("1_x6ig2")]
 transform = Transform3D(-0.685, 0, -1.0343213e-07, 0, 0.685, 0, 1.0343213e-07, 0, -0.685, -0.25388867, 1.0775795, -8.857727)
+[node name="Player" parent="." unique_id=488970819 instance=ExtResource("2_yin0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6545403, 0)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=890863122]
+use_collision = true
+size = Vector3(20, 0.5, 20)
 
 [node name="Lixeira" parent="." unique_id=842685213 instance=ExtResource("3_2oms3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.743115, 0.46001327, -9.06272)

@@ -1,4 +1,4 @@
-extends Node3D
+class_name Level extends Node3D
 
 @onready var player: Player = $Player
 

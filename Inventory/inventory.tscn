@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ump3fv3qmwmc" path="res://Inventory/inventory.gd" id="1_xqyry"]
 [ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="2_88mhb"]
+[ext_resource type="AudioStream" uid="uid://bel110c58w5wk" path="res://Outdated/Inventario/Som de Inventário.wav" id="3_88mhb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqyry"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -17,6 +18,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Inventory" type="Node3D" unique_id=1324267762]
+process_mode = 2
 script = ExtResource("1_xqyry")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1988167178]
@@ -33,3 +35,7 @@ metadata/_custom_type_script = "uid://dij1wi7j32xhg"
 [node name="Camera3D" type="Camera3D" parent="CameraComponent" unique_id=1992677671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.0024793)
 fov = 20.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=749792446]
+process_mode = 2
+stream = ExtResource("3_88mhb")

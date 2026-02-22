@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvou76lmh6hu"
-path.s3tc="res://.godot/imported/metal_tile.jpg-e620e0bc3fae6f4d1bb6eb009cf381a4.s3tc.ctex"
+path.s3tc="res://.godot/imported/metal_tile.jpg-42e64cb2a290c884fe168f40b8bd6b8c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mobilia/Cama/metal_tile.jpg"
-dest_files=["res://.godot/imported/metal_tile.jpg-e620e0bc3fae6f4d1bb6eb009cf381a4.s3tc.ctex"]
+source_file="res://Mobilia/Cama/metal_tile.jpg"
+dest_files=["res://.godot/imported/metal_tile.jpg-42e64cb2a290c884fe168f40b8bd6b8c.s3tc.ctex"]
 
 [params]
 

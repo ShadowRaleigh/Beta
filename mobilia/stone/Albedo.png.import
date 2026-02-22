@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tck1vk1u0n6h"
-path.s3tc="res://.godot/imported/Albedo.png-d4997ecef3f88cf2045130fd1454b664.s3tc.ctex"
+path.s3tc="res://.godot/imported/Albedo.png-a61adad2f633cc4cd848bb1f8a2c72aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mobilia/stone/Albedo.png"
-dest_files=["res://.godot/imported/Albedo.png-d4997ecef3f88cf2045130fd1454b664.s3tc.ctex"]
+source_file="res://Mobilia/stone/Albedo.png"
+dest_files=["res://.godot/imported/Albedo.png-a61adad2f633cc4cd848bb1f8a2c72aa.s3tc.ctex"]
 
 [params]
 

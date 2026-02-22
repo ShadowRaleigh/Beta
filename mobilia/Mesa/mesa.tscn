@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bsc2up27afe2j"]
 
-[ext_resource type="PackedScene" uid="uid://j477fai4efw" path="res://mobilia/Mesa/Mesa.blend" id="1_02arh"]
+[ext_resource type="PackedScene" uid="uid://j477fai4efw" path="res://Mobilia/Mesa/Mesa.blend" id="1_02arh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_02arh"]
 size = Vector3(2.0078125, 0.23138428, 3.2019043)

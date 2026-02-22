@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://r1q30t7ei6kv" path="res://Generic Components/visual_component_3d.gd" id="2_p2kau"]
 
 [node name="Item" type="RigidBody3D" unique_id=533263218]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_bkywi")
 
 [node name="VisualComponent3D" type="Node3D" parent="." unique_id=1429482265]

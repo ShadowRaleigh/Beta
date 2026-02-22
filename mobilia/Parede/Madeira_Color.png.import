@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsxg4tu5njdud"
-path="res://.godot/imported/Madeira_Color.png-a983afb43f16e09bae9e4d0dcb69b40b.ctex"
+path="res://.godot/imported/Madeira_Color.png-a6e04d71192d5c2918fcef0f8a610b0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mobilia/Parede/Madeira_Color.png"
-dest_files=["res://.godot/imported/Madeira_Color.png-a983afb43f16e09bae9e4d0dcb69b40b.ctex"]
+source_file="res://Mobilia/Parede/Madeira_Color.png"
+dest_files=["res://.godot/imported/Madeira_Color.png-a6e04d71192d5c2918fcef0f8a610b0b.ctex"]
 
 [params]
 

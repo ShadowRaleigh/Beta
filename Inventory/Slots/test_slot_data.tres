@@ -11,7 +11,6 @@ name = "TestName"
 description = "TestDescription"
 icon = ExtResource("1_xp11f")
 model = ExtResource("2_bghft")
-can_rotate = true
 mass = 0.3
 metadata/_custom_type_script = "uid://b1j3u60r47ibo"
 

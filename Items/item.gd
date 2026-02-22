@@ -1,7 +1,7 @@
 class_name Item extends RigidBody3D
 
 #region components
-@onready var visual_component: VisualComponent3D = $Visual3DComponent
+@onready var visual_component: VisualComponent3D = $VisualComponent3D
 #endregion
 
 @export var slot_data:SlotData

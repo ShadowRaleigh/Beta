@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ocfjh10cobjp"
-path.s3tc="res://.godot/imported/WoodSiding007_1K-PNG_Roughness.png-65c7c29319303d67845db8481822f900.s3tc.ctex"
+path.s3tc="res://.godot/imported/WoodSiding007_1K-PNG_Roughness.png-cc2bf1f4b9f2a7a41281d19c0114b81a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mobilia/Parede/WoodSiding007_1K-PNG_Roughness.png"
-dest_files=["res://.godot/imported/WoodSiding007_1K-PNG_Roughness.png-65c7c29319303d67845db8481822f900.s3tc.ctex"]
+source_file="res://Mobilia/Parede/WoodSiding007_1K-PNG_Roughness.png"
+dest_files=["res://.godot/imported/WoodSiding007_1K-PNG_Roughness.png-cc2bf1f4b9f2a7a41281d19c0114b81a.s3tc.ctex"]
 
 [params]
 

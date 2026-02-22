@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://blump5n8fw8f8"]
+
+[ext_resource type="Texture2D" uid="uid://bl2bquv5o6mh2" path="res://Items/Lata_Lacrada/Lata_lacrada.png" id="1_rmb0t"]
+[ext_resource type="Script" uid="uid://b1j3u60r47ibo" path="res://Items/item_data.gd" id="1_v7c1a"]
+[ext_resource type="PackedScene" uid="uid://cvmhbbfwyjs56" path="res://Items/Lata_Lacrada/Lata_Lacrada.blend" id="2_07ywu"]
+
+[resource]
+script = ExtResource("1_v7c1a")
+scene_uid = "uid://byyxlshpugagx"
+name = "Sealed Can"
+description = "A sealed can"
+icon = ExtResource("1_rmb0t")
+model = ExtResource("2_07ywu")
+mass = 0.1
+metadata/_custom_type_script = "uid://b1j3u60r47ibo"

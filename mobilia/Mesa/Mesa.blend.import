@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://j477fai4efw"
-path="res://.godot/imported/Mesa.blend-20a549fe29391b9ee5521b43f5622c2b.scn"
+path="res://.godot/imported/Mesa.blend-85d1032ce1be10f549d2b60de48afe03.scn"
 
 [deps]
 
-source_file="res://mobilia/Mesa/Mesa.blend"
-dest_files=["res://.godot/imported/Mesa.blend-20a549fe29391b9ee5521b43f5622c2b.scn"]
+source_file="res://Mobilia/Mesa/Mesa.blend"
+dest_files=["res://.godot/imported/Mesa.blend-85d1032ce1be10f549d2b60de48afe03.scn"]
 
 [params]
 

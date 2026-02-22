@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://byyxlshpugagx"]
+
+[ext_resource type="Script" uid="uid://ck82rcncf5cgl" path="res://Items/item.gd" id="1_bau45"]
+[ext_resource type="Resource" uid="uid://blump5n8fw8f8" path="res://Items/Lata_Lacrada/sealed_can_item_data.tres" id="2_7avas"]
+[ext_resource type="Script" uid="uid://r1q30t7ei6kv" path="res://Generic Components/visual_component_3d.gd" id="2_u0t6e"]
+[ext_resource type="Script" uid="uid://bgsqc6n1wxbqg" path="res://Inventory/Slots/slot_data.gd" id="3_3kmku"]
+
+[sub_resource type="Resource" id="Resource_akrwi"]
+script = ExtResource("3_3kmku")
+item_data = ExtResource("2_7avas")
+ammount = 1
+metadata/_custom_type_script = "uid://bgsqc6n1wxbqg"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_akrwi"]
+radius = 0.163
+
+[node name="SealedCan" type="RigidBody3D" unique_id=610772085]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_bau45")
+slot_data = SubResource("Resource_akrwi")
+metadata/_custom_type_script = "uid://ck82rcncf5cgl"
+
+[node name="VisualComponent3D" type="Node3D" parent="." unique_id=80290180]
+script = ExtResource("2_u0t6e")
+metadata/_custom_type_script = "uid://r1q30t7ei6kv"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=726314451]
+shape = SubResource("SphereShape3D_akrwi")

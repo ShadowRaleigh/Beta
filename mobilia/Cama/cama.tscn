@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brbcxsmeb0oa0"]
 
-[ext_resource type="PackedScene" uid="uid://dj2cjm3c81oid" path="res://mobilia/Cama/Bed.fbx" id="1_b1ynl"]
+[ext_resource type="PackedScene" uid="uid://dj2cjm3c81oid" path="res://Mobilia/Cama/Bed.fbx" id="1_b1ynl"]
 
 [node name="Cama" type="Node3D" unique_id=1688777696]
 

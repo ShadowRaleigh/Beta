@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://crkquud1gxmmn"
-path="res://.godot/imported/Bed.obj-860f9072557bd930d9f8e37107093d34.mesh"
+path="res://.godot/imported/Bed.obj-a82c433aab374fd75e30fb885652b1b8.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Bed.obj-860f9072557bd930d9f8e37107093d34.mesh"]
+files=["res://.godot/imported/Bed.obj-a82c433aab374fd75e30fb885652b1b8.mesh"]
 
-source_file="res://mobilia/Cama/Bed.obj"
-dest_files=["res://.godot/imported/Bed.obj-860f9072557bd930d9f8e37107093d34.mesh", "res://.godot/imported/Bed.obj-860f9072557bd930d9f8e37107093d34.mesh"]
+source_file="res://Mobilia/Cama/Bed.obj"
+dest_files=["res://.godot/imported/Bed.obj-a82c433aab374fd75e30fb885652b1b8.mesh", "res://.godot/imported/Bed.obj-a82c433aab374fd75e30fb885652b1b8.mesh"]
 
 [params]
 

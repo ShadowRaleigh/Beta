@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cncbkv65ua73p"
-path="res://.godot/imported/OuroFosco_Color.png-4b071809708c906ff0101daf0372aa4c.ctex"
+path="res://.godot/imported/OuroFosco_Color.png-edfd9970a819c8aaa4fc79f27179259f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mobilia/Parede/OuroFosco_Color.png"
-dest_files=["res://.godot/imported/OuroFosco_Color.png-4b071809708c906ff0101daf0372aa4c.ctex"]
+source_file="res://Mobilia/Parede/OuroFosco_Color.png"
+dest_files=["res://.godot/imported/OuroFosco_Color.png-edfd9970a819c8aaa4fc79f27179259f.ctex"]
 
 [params]
 

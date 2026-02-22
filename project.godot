@@ -11,15 +11,14 @@ config_version=5
 [application]
 
 config/name="Beta"
-run/main_scene="uid://bk5l0vyhe7c78"
+run/main_scene="uid://sufwyvkraixj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*uid://dvqsxnfiyuqrs"
-Hotbar="*uid://bljog73y0s4pv"
 InputManager="*uid://dmkpned7v3cwm"
+GameManager="*uid://byr537udh6rid"
 
 [display]
 
@@ -143,6 +142,11 @@ previous_inv_item={
 , Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":4,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Physical Collisions"
+3d_physics/layer_2="Items"
 
 [physics]
 

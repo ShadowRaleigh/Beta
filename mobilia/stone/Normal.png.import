@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://53mj6tl8bq5n"
-path.s3tc="res://.godot/imported/Normal.png-d9aca6f0f6184e1bf9c3b56ed05d2de4.s3tc.ctex"
+path.s3tc="res://.godot/imported/Normal.png-5936e7a114e34e4fd7a460bf882decf1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mobilia/stone/Normal.png"
-dest_files=["res://.godot/imported/Normal.png-d9aca6f0f6184e1bf9c3b56ed05d2de4.s3tc.ctex"]
+source_file="res://Mobilia/stone/Normal.png"
+dest_files=["res://.godot/imported/Normal.png-5936e7a114e34e4fd7a460bf882decf1.s3tc.ctex"]
 
 [params]
 

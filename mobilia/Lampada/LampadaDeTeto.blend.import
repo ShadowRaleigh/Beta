@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dqjhgbgr1c51r"
-path="res://.godot/imported/LampadaDeTeto.blend-cd7ac1feca475607ea71957dbe7bcfd5.scn"
+path="res://.godot/imported/LampadaDeTeto.blend-e18104ca1bdb871daad87aeda80ff53e.scn"
 
 [deps]
 
-source_file="res://mobilia/Lampada/LampadaDeTeto.blend"
-dest_files=["res://.godot/imported/LampadaDeTeto.blend-cd7ac1feca475607ea71957dbe7bcfd5.scn"]
+source_file="res://Mobilia/Lampada/LampadaDeTeto.blend"
+dest_files=["res://.godot/imported/LampadaDeTeto.blend-e18104ca1bdb871daad87aeda80ff53e.scn"]
 
 [params]
 

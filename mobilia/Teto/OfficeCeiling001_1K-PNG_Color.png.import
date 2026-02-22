@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d5f5iw00o0rh"
-path.s3tc="res://.godot/imported/OfficeCeiling001_1K-PNG_Color.png-30d6fee4eaf9cc98d70992db8feb1ba1.s3tc.ctex"
+path.s3tc="res://.godot/imported/OfficeCeiling001_1K-PNG_Color.png-ea32645efce91516140ebb7727f3df35.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mobilia/Teto/OfficeCeiling001_1K-PNG_Color.png"
-dest_files=["res://.godot/imported/OfficeCeiling001_1K-PNG_Color.png-30d6fee4eaf9cc98d70992db8feb1ba1.s3tc.ctex"]
+source_file="res://Mobilia/Teto/OfficeCeiling001_1K-PNG_Color.png"
+dest_files=["res://.godot/imported/OfficeCeiling001_1K-PNG_Color.png-ea32645efce91516140ebb7727f3df35.s3tc.ctex"]
 
 [params]
 

@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://bk5l0vyhe7c78"]
 
-[ext_resource type="PackedScene" uid="uid://diewyw72v4y7i" path="res://Player/player.tscn" id="1_hqwtv"]
-[ext_resource type="Script" path="res://Salas/room_1.gd" id="1_x3fbe"]
-[ext_resource type="PackedScene" uid="uid://bsc2up27afe2j" path="res://mobilia/Mesa/mesa.tscn" id="3_yvytj"]
-[ext_resource type="Material" uid="uid://mluhyuwyeflw" path="res://mobilia/Parede/parede_material.tres" id="4_dvehe"]
-[ext_resource type="PackedScene" uid="uid://brbcxsmeb0oa0" path="res://mobilia/Cama/cama.tscn" id="5_0n4le"]
-[ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://mobilia/stone/pedra.tres" id="6_5w4g1"]
-[ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://mobilia/Teto/new_standard_material_3d.tres" id="7_3vcrp"]
-[ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://mobilia/Lampada/LampadaDeTeto.blend" id="8_pt3ae"]
-[ext_resource type="PackedScene" uid="uid://dggm1mbm0bkcm" path="res://mobilia/Porta/Cena_porta_de_madeira_rustica.tscn" id="9_pt3ae"]
+[ext_resource type="Script" uid="uid://co0f3utuecp0b" path="res://Salas/level.gd" id="1_x3fbe"]
+[ext_resource type="PackedScene" uid="uid://bexul20hjnkrs" path="res://Player/player.tscn" id="2_pt3ae"]
+[ext_resource type="PackedScene" uid="uid://bsc2up27afe2j" path="res://Mobilia/Mesa/mesa.tscn" id="3_yvytj"]
+[ext_resource type="Material" uid="uid://mluhyuwyeflw" path="res://Mobilia/Parede/parede_material.tres" id="4_dvehe"]
+[ext_resource type="PackedScene" uid="uid://brbcxsmeb0oa0" path="res://Mobilia/Cama/cama.tscn" id="5_0n4le"]
+[ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://Mobilia/stone/pedra.tres" id="6_5w4g1"]
+[ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://Mobilia/Teto/new_standard_material_3d.tres" id="7_3vcrp"]
+[ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://Mobilia/Lampada/LampadaDeTeto.blend" id="8_pt3ae"]
+[ext_resource type="PackedScene" uid="uid://br44a0qbkfghg" path="res://Mobilia/Porta/Porta-de-madeira-rustica (1).fbx" id="9_4nmrn"]
+[ext_resource type="PackedScene" uid="uid://byyxlshpugagx" path="res://Items/Lata_Lacrada/sealed_can.tscn" id="10_4nmrn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dvehe"]
 
@@ -20,104 +21,108 @@ size = Vector3(20.002823, 7.9933777, 0.21484375)
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvehe"]
 size = Vector3(20.116974, 0.2748413, 20.21286)
 
-[node name="Sala1" type="Node3D" unique_id=1059648526]
+[node name="Sala1" type="Node3D" unique_id=756332557]
 script = ExtResource("1_x3fbe")
+metadata/_custom_type_script = "uid://co0f3utuecp0b"
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2002786097]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
+[node name="Player" parent="." unique_id=488970819 instance=ExtResource("2_pt3ae")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0806756, 0)
 
-[node name="Player" parent="." unique_id=488970819 instance=ExtResource("1_hqwtv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32645416, 2.23005, 0.025582314)
+[node name="Walls" type="Node3D" parent="." unique_id=305696726]
 
-[node name="Mesa" parent="." unique_id=706254884 instance=ExtResource("3_yvytj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09939802, 0.27647322, -8.43473)
+[node name="Parede 1" type="StaticBody3D" parent="Walls" unique_id=1804808644]
 
-[node name="Parede 1" type="StaticBody3D" parent="." unique_id=1804808644]
-
-[node name="Parede 1" type="MeshInstance3D" parent="Parede 1" unique_id=1743388398]
+[node name="Parede 1" type="MeshInstance3D" parent="Walls/Parede 1" unique_id=1743388398]
 transform = Transform3D(20, 0, 0, 0, 8, 0, 0, 0, 0.2, 0, 3.75, -10)
 material_override = ExtResource("4_dvehe")
 mesh = SubResource("BoxMesh_dvehe")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede 1" unique_id=2029742717]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Parede 1" unique_id=2029742717]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00031280518, 3.758133, -10.003906)
 shape = SubResource("BoxShape3D_0n4le")
 
-[node name="Parede 2" type="StaticBody3D" parent="." unique_id=239007892]
+[node name="Parede 2" type="StaticBody3D" parent="Walls" unique_id=239007892]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="Parede 2" type="MeshInstance3D" parent="Parede 2" unique_id=542933350]
+[node name="Parede 2" type="MeshInstance3D" parent="Walls/Parede 2" unique_id=542933350]
 transform = Transform3D(20, 0, 0, 0, 8, 0, 0, 0, 0.2, 0, 3.75, -10)
 material_override = ExtResource("4_dvehe")
 mesh = SubResource("BoxMesh_dvehe")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede 2" unique_id=119898205]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Parede 2" unique_id=119898205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00031280518, 3.758133, -10.003906)
 shape = SubResource("BoxShape3D_0n4le")
 
-[node name="Cama" parent="." unique_id=1688777696 instance=ExtResource("5_0n4le")]
-transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -7.023362, 0.31227753, 8.060788)
-
-[node name="Parede 3" type="StaticBody3D" parent="." unique_id=1459882817]
+[node name="Parede 3" type="StaticBody3D" parent="Walls" unique_id=1459882817]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Parede 3" type="MeshInstance3D" parent="Parede 3" unique_id=243895056]
+[node name="Parede 3" type="MeshInstance3D" parent="Walls/Parede 3" unique_id=243895056]
 transform = Transform3D(20, 0, 0, 0, 8, 0, 0, 0, 0.2, 0, 3.75, -10)
 material_override = ExtResource("4_dvehe")
 mesh = SubResource("BoxMesh_dvehe")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede 3" unique_id=1504652232]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Parede 3" unique_id=1504652232]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00031280518, 3.758133, -10.003906)
 shape = SubResource("BoxShape3D_0n4le")
 
-[node name="Parede 4" type="StaticBody3D" parent="." unique_id=1830898311]
+[node name="Parede 4" type="StaticBody3D" parent="Walls" unique_id=1830898311]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="Parede esquerda" type="MeshInstance3D" parent="Parede 4" unique_id=1800434598]
+[node name="Parede esquerda" type="MeshInstance3D" parent="Walls/Parede 4" unique_id=1800434598]
 transform = Transform3D(8.5, 0, 0, 0, 8, 0, 0, 0, 0.2, 5.57, 3.75, -10)
 material_override = ExtResource("4_dvehe")
 mesh = SubResource("BoxMesh_dvehe")
 
-[node name="Parede direita" type="MeshInstance3D" parent="Parede 4" unique_id=1098438324]
+[node name="Parede direita" type="MeshInstance3D" parent="Walls/Parede 4" unique_id=1098438324]
 transform = Transform3D(8.5, 0, 0, 0, 8, 0, 0, 0, 0.2, -5.57, 3.75, -10)
 material_override = ExtResource("4_dvehe")
 mesh = SubResource("BoxMesh_dvehe")
 
-[node name="Parede topo" type="MeshInstance3D" parent="Parede 4" unique_id=1334527396]
+[node name="Parede topo" type="MeshInstance3D" parent="Walls/Parede 4" unique_id=1334527396]
 transform = Transform3D(2.65, 0, 0, 0, 8, 0, 0, 0, 0.2, 0, 9.746, -10)
 material_override = ExtResource("4_dvehe")
 mesh = SubResource("BoxMesh_dvehe")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede 4" unique_id=1785122750]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Parede 4" unique_id=1785122750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00031280518, 3.758133, -10.003906)
 shape = SubResource("BoxShape3D_0n4le")
 
-[node name="Chão" type="StaticBody3D" parent="." unique_id=74757634]
+[node name="Chão" type="StaticBody3D" parent="Walls" unique_id=74757634]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1827126434]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Chão" unique_id=1827126434]
 transform = Transform3D(20, 0, 0, 0, 0.5, 0, 0, 0, 20, 0, 0.021631718, 0)
 material_override = ExtResource("6_5w4g1")
 mesh = SubResource("BoxMesh_yvytj")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Chão" unique_id=2001486588]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Chão" unique_id=2001486588]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041763306, 0.13589478, -0.004928589)
 shape = SubResource("BoxShape3D_dvehe")
 
-[node name="Teto" type="StaticBody3D" parent="." unique_id=1470745692]
+[node name="Teto" type="StaticBody3D" parent="Walls" unique_id=1470745692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.49984, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Teto" unique_id=1213901726]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Teto" unique_id=1213901726]
 transform = Transform3D(20, 0, 0, 0, 0.5, 0, 0, 0, 20, 0, 0.021631718, 0)
 material_override = ExtResource("7_3vcrp")
 mesh = SubResource("BoxMesh_yvytj")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Teto" unique_id=2122779577]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Teto" unique_id=2122779577]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041763306, 0.13589478, -0.004928589)
 shape = SubResource("BoxShape3D_dvehe")
 
-[node name="LampadaDeTeto" parent="." unique_id=239778657 instance=ExtResource("8_pt3ae")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 5.456, 0)
+[node name="Furniture" type="Node3D" parent="." unique_id=1170550143]
 
-[node name="Porta-de-madeira-rustica" parent="." unique_id=173366247 instance=ExtResource("9_pt3ae")]
-transform = Transform3D(2.76, 0, 0, 0, 2.76, 0, 0, 0, 3.1, 9.984265, 2.8283308, 0)
+[node name="Mesa" parent="Furniture" unique_id=706254884 instance=ExtResource("3_yvytj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09939802, 0.27647322, -8.43473)
+
+[node name="Cama" parent="Furniture" unique_id=1688777696 instance=ExtResource("5_0n4le")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -7.023362, 0.31227753, 8.060788)
+
+[node name="LampadaDeTeto" parent="Furniture" unique_id=121027977 instance=ExtResource("8_pt3ae")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.01988697, 5.456, 0.025327682)
+
+[node name="Porta-de-madeira-rustica (1)" parent="Furniture" unique_id=1939222447 instance=ExtResource("9_4nmrn")]
+transform = Transform3D(-1.162723e-07, -2.66, 0, 2.66, -1.162723e-07, 0, 0, 0, 3.085, 10.017, 2.9660857, 0)
+
+[node name="SealedCan" parent="." unique_id=610772085 instance=ExtResource("10_4nmrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7758305, -8.094181)
