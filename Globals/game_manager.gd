@@ -14,10 +14,15 @@ func toggle_inventory():
 	
 	current_level.player.camera_component.current = !current_level.player.camera_component.current
 	inventory.camera_component.current = !inventory.camera_component.current
+	inventory.ui_layer.visible = !inventory.ui_layer.visible
 	
 	current_level.visible = !current_level.visible
 	inventory.visible = !inventory.visible
 	get_tree().paused = !get_tree().paused
+	
+	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	else: Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func move_to_next_level() -> void:
 	next_level_instance = next_level_scene.instantiate()

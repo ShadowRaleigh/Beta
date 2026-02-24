@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://hepngnm7a1xb"]
 
-[ext_resource type="PackedScene" uid="uid://cxnmgq2u21aqc" path="res://mobilia/Mesa/desk.blend" id="1_x6ig2"]
-[ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://mobilia/stone/pedra.tres" id="2_5l4ma"]
-[ext_resource type="PackedScene" uid="uid://cc5wpsumfof3x" path="res://mobilia/Lixeira.blend" id="3_2oms3"]
-[ext_resource type="Material" uid="uid://mluhyuwyeflw" path="res://mobilia/Parede/parede_material.tres" id="3_5l4ma"]
-[ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://mobilia/Teto/new_standard_material_3d.tres" id="5_30t2u"]
-[ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://mobilia/Lampada/LampadaDeTeto.blend" id="6_td6ns"]
-[ext_resource type="PackedScene" uid="uid://tmxcqyr8ecmu" path="res://mobilia/Porta de Barras/Porta de barras.tscn" id="7_td6ns"]
+[ext_resource type="Script" uid="uid://co0f3utuecp0b" path="res://Salas/level.gd" id="1_jo3id"]
+[ext_resource type="PackedScene" uid="uid://cxnmgq2u21aqc" path="res://Mobilia/Mesa/desk.blend" id="1_x6ig2"]
+[ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://Mobilia/stone/pedra.tres" id="2_5l4ma"]
+[ext_resource type="PackedScene" uid="uid://bexul20hjnkrs" path="res://Player/player.tscn" id="2_5s4b2"]
+[ext_resource type="PackedScene" uid="uid://cc5wpsumfof3x" path="res://Mobilia/Lixeira.blend" id="3_2oms3"]
+[ext_resource type="Material" uid="uid://mluhyuwyeflw" path="res://Mobilia/Parede/parede_material.tres" id="3_5l4ma"]
+[ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://Mobilia/Teto/new_standard_material_3d.tres" id="5_30t2u"]
+[ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://Mobilia/Lampada/LampadaDeTeto.blend" id="6_td6ns"]
+[ext_resource type="PackedScene" uid="uid://tmxcqyr8ecmu" path="res://Mobilia/Porta de Barras/Porta de barras.tscn" id="7_td6ns"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2oms3"]
 
@@ -28,7 +30,12 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_jo3id"]
 size = Vector3(20.116974, 0.2748413, 20.21286)
 
-[node name="Sala2" type="Node3D" unique_id=1059648526]
+[node name="Sala2" type="Node3D" unique_id=987588745]
+script = ExtResource("1_jo3id")
+metadata/_custom_type_script = "uid://co0f3utuecp0b"
+
+[node name="Player" parent="." unique_id=488970819 instance=ExtResource("2_5s4b2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.089873075, 1.6208558, -4.0850925)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2002786097]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)

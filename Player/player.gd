@@ -6,11 +6,14 @@ class_name Player extends CharacterBody3D
 @onready var camera_component: CameraComponent = $CameraComponent
 @onready var collector_component: CollectorComponent = $CollectorComponent
 @onready var inventory_component: InventoryComponent = $InventoryComponent
+@onready var interaction_component: InteractionComponent = $InteractionComponent
 
 func _ready() -> void:
 	camera_component.setup_camera_for_body()
 	InputManager.collecting.connect(collector_component.collect_item)
+	InputManager.collecting.connect(interaction_component.interact)
 	collector_component.inventory = inventory_component.inventory_data
+	
 
 func _physics_process(delta: float) -> void:
 	movement_component.raw_direction = InputManager.move_dir

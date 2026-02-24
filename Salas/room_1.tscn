@@ -8,8 +8,11 @@
 [ext_resource type="Material" uid="uid://cmke7ka1nwoel" path="res://Mobilia/stone/pedra.tres" id="6_5w4g1"]
 [ext_resource type="Material" uid="uid://du1lgwxn1o372" path="res://Mobilia/Teto/new_standard_material_3d.tres" id="7_3vcrp"]
 [ext_resource type="PackedScene" uid="uid://dqjhgbgr1c51r" path="res://Mobilia/Lampada/LampadaDeTeto.blend" id="8_pt3ae"]
-[ext_resource type="PackedScene" uid="uid://bn6pklxwjbj55" path="res://Mobilia/Porta/Porta-de-madeira-rustica (1).glb" id="9_4nmrn"]
+[ext_resource type="PackedScene" uid="uid://dggm1mbm0bkcm" path="res://Mobilia/Porta/Cena_porta_de_madeira_rustica.tscn" id="9_4nmrn"]
 [ext_resource type="PackedScene" uid="uid://byyxlshpugagx" path="res://Items/Lata_Lacrada/sealed_can.tscn" id="10_4nmrn"]
+[ext_resource type="Script" uid="uid://dxx1l4ud8qivw" path="res://Events/event_loader.gd" id="11_ipyf6"]
+[ext_resource type="Script" uid="uid://cwprukhk2wv1h" path="res://Events/event.gd" id="12_yk1hy"]
+[ext_resource type="Script" uid="uid://b0cduod87agj0" path="res://Events/move_to_next_level_event.gd" id="13_ybvuf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dvehe"]
 
@@ -20,6 +23,13 @@ size = Vector3(20.002823, 7.9933777, 0.21484375)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvehe"]
 size = Vector3(20.116974, 0.2748413, 20.21286)
+
+[sub_resource type="Resource" id="Resource_o3qup"]
+script = ExtResource("13_ybvuf")
+metadata/_custom_type_script = "uid://b0cduod87agj0"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dj0qs"]
+size = Vector3(0.68652344, 5.585449, 2.939682)
 
 [node name="Sala1" type="Node3D" unique_id=756332557]
 script = ExtResource("1_x3fbe")
@@ -121,8 +131,17 @@ transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08
 [node name="LampadaDeTeto" parent="Furniture" unique_id=121027977 instance=ExtResource("8_pt3ae")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.01988697, 5.456, 0.025327682)
 
-[node name="Porta-de-madeira-rustica (1)" parent="Furniture" unique_id=1939222447 instance=ExtResource("9_4nmrn")]
-transform = Transform3D(-1.162723e-07, -2.66, 0, 2.66, -1.162723e-07, 0, 0, 0, 3.085, 10.017, 2.9660857, 0)
+[node name="Porta-de-madeira-rustica" parent="Furniture" unique_id=173366247 instance=ExtResource("9_4nmrn")]
+transform = Transform3D(2.66, 0, 0, 0, 2.66, 0, 0, 0, 3.085, 9.94813, 2.9520087, 0)
 
 [node name="SealedCan" parent="." unique_id=610772085 instance=ExtResource("10_4nmrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7758305, -8.094181)
+
+[node name="EventLoader" type="Area3D" parent="." unique_id=1052055364]
+script = ExtResource("11_ipyf6")
+event_array = Array[ExtResource("12_yk1hy")]([SubResource("Resource_o3qup")])
+metadata/_custom_type_script = "uid://dxx1l4ud8qivw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EventLoader" unique_id=186130749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.586445, 3.0779357, 0.05568695)
+shape = SubResource("BoxShape3D_dj0qs")

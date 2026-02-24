@@ -4,6 +4,12 @@ var slot_scene:PackedScene = preload("uid://mk4k5vsav3hd")
 
 @onready var camera_component: CameraComponent = $CameraComponent
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var ui_layer: CanvasLayer = $UILayer
+
+@onready var name_label: Label = $UILayer/HBoxContainer/VBoxContainer/NameLabel
+@onready var description_label: Label = $UILayer/HBoxContainer/VBoxContainer/DescriptionLabel
+@onready var ammount_label: Label = $UILayer/HBoxContainer/VBoxContainer/AmmountLabel
+
 
 @export var inventory_data:InventoryData: #= preload("uid://bwpotscgbhxbw"):
 	set(new_data):
@@ -60,6 +66,11 @@ func update_slot_exhibition(next_slot_index: int = 0) -> void:
 		slot_array[current_slot_index].hide()
 		slot_array[next_slot_index].show()
 		audio_stream_player.play()
+		
+		if name_label:
+			name_label.text = "Nome: %s" % slot_array[next_slot_index].item_name
+			description_label.text = "Descrição: %s" % slot_array[next_slot_index].description
+			ammount_label.text = "Quantidade: %s" % slot_array[next_slot_index].ammount
 
 func update_inventory_slots(_slot = 0) -> void:
 	clear_inventory()

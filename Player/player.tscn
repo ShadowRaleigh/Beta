@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://60pqk1jc74go" path="res://Generic Components/inventory_component.gd" id="2_fhl08"]
 [ext_resource type="Script" uid="uid://ls8ityo4tnif" path="res://Generic Components/movement_component.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://dij1wi7j32xhg" path="res://Generic Components/camera_component.gd" id="3_gwnis"]
-[ext_resource type="Resource" uid="uid://x8futa6swafa" path="res://Player/player_inventory.tres" id="3_vtle1"]
+[ext_resource type="Resource" uid="uid://d0j2bvlmpm7rw" path="res://Player/player_inventory.tres" id="3_vtle1"]
 [ext_resource type="Script" uid="uid://dxq3bkydbd172" path="res://Generic Components/collector_component.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://7feymbv34tp" path="res://Generic Components/interaction_component.gd" id="4_vtle1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_btcbx"]
 
@@ -28,6 +29,11 @@ mesh = SubResource("CapsuleMesh_btcbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1754034631]
 shape = SubResource("CapsuleShape3D_4ntmi")
+
+[node name="InteractionComponent" type="Node" parent="." unique_id=1754490858 node_paths=PackedStringArray("holder")]
+script = ExtResource("4_vtle1")
+holder = NodePath("../Head")
+metadata/_custom_type_script = "uid://7feymbv34tp"
 
 [node name="CollectorComponent" type="Node" parent="." unique_id=114107850 node_paths=PackedStringArray("holder")]
 script = ExtResource("4_gwnis")

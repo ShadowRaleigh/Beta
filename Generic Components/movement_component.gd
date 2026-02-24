@@ -27,6 +27,5 @@ func move(delta: float) -> void:
 	body.move_and_slide()
 	
 func jump() -> void:
-	#if body.is_on_floor():
-		#body.velocity.y = jump_velocity
-	GameManager.move_to_next_level()
+	if body.is_on_floor():
+		body.velocity.y = jump_velocity
